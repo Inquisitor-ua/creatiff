@@ -1,0 +1,116 @@
+.ContactForm{
+    background-color: #353E23;
+    padding: 72px 104px;
+    color: #FFFFFF
+}
+.ContactForm h2{
+    text-align: center;
+    font-size: 40px;
+    font-style: bold;
+    font-weight: 700;
+    line-height: 125%;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ContactForm form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 32px;
+    width: 1024px;
+}
+.form-row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+.field-wrapper{
+    flex: 1;
+}
+.field-wrapper label{
+    display: inline-block;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-style: medium;
+    font-size: 24px;
+    line-height: 125%;
+    letter-spacing: 0%;
+    margin-bottom: 8px;
+}
+.field-wrapper span{
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 24px;
+    line-height: 125%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #FF9300;
+}
+.field-wrapper input{
+    width: calc(100% - 32px);
+    opacity: 1;
+    border-radius: 8px;
+    border-width: 1px;
+    padding: 13px 16px;
+    border-color: #ffffff40;
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 125%;
+    letter-spacing: 0%;
+}
+.full-width{
+    width: 100%;
+}
+.full-width textarea{
+    width: calc(100% - 32px);
+    min-height: 144px;
+    opacity: 1;
+    border-radius: 8px;
+    border-width: 1px;
+    padding: 13px 16px;
+    border-color: #ffffff40;
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 125%;
+    letter-spacing: 0%;
+}
+.contact-form-button{
+    height: 56px;
+    opacity: 1;
+    border-radius: 64px;
+    padding-top: 12px;
+    padding-right: 32px;
+    padding-bottom: 12px;
+    padding-left: 32px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 125%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    background-color: #FF9300;
+    border: none;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+}
+.contact-form-button:hover{
+    cursor: pointer;
+    background-color: #bd6e00;
+}
