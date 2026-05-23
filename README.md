@@ -76,6 +76,12 @@ Open your browser and navigate to:
 
 Your project is running and ready to work! 🎉
 
+### Admin Panel Credentials
+
+The admin panel login credentials are stored in the `.env` file:
+- **Username:** Check the `DJANGO_SUPERUSER_USERNAME` variable in your `.env` file
+- **Password:** Check the `DJANGO_SUPERUSER_PASSWORD` variable in your `.env` file
+
 ## Project Structure
 
 ```
