@@ -1,3 +1,4 @@
+{% load wagtailimages_tags %}
 <footer>
     <div class="footer-content">
         <div class="footer-info">
@@ -16,7 +17,7 @@
                         </defs>
                         </svg>
                     </span>
-                    star.creatiff@gmail.com
+                    {{ footer_settings.email }}
                 </div>
                 <div class="footer-social">
                     <span>
@@ -31,9 +32,9 @@
                         </defs>
                         </svg>
                     </span>
-                    951 392 250
+                    {{ footer_settings.phone }}
                 </div>
-                <a class="footer-social" href="https://www.instagram.com" target="_blank">
+                <a class="footer-social" href="{{ footer_settings.instagram_url }}" target="_blank">
                     <span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1_329)">
@@ -50,7 +51,7 @@
                     </span>
                     Instagram
                 </a>
-                <a class="footer-social" href="https://www.facebook.com" target="_blank">
+                <a class="footer-social" href="{{ footer_settings.facebook_url }}" target="_blank">
                     <span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1_332)">
