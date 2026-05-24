@@ -1,7 +1,82 @@
-{% load wagtailimages_tags %}
-
-{{ header_settings.title }}
-{{ header_settings.subtitle }}
-<img src="{{ header_settings.logo.url }}" alt="{{ header_settings.title }}">
-{{ header_settings.phone }}
-{{ header_settings.email }}
+{% load static wagtailimages_tags my_components %}
+<header>
+    <div class="container">
+        <div class="brand">
+            <img src="{{ header_settings.logo.url }}" alt="{{ header_settings.title }}">
+            <div class="brand-text">
+                <p>{{ header_settings.title }}</p>
+                <p>{{ header_settings.subtitle }}</p>
+            </div>
+        </div>
+        <nav class="header-nav">
+            <svg class="icon hamburger-menu" width="32" height="32">
+                <use href="./media/icons.svg#hamburger-menu"></use>
+            </svg>
+            <ul class="header-menu">
+                <li>
+                    <svg class="icon" width="24" height="24">
+                        <use href="./media/icons.svg#mail"></use>
+                    </svg>
+                    <a href="mailto:star.creatiff@gmail.com" class="nav-link">
+                        {{ header_settings.email }}
+                    </a>
+                </li>
+                <li>
+                    <svg class="icon" width="24" height="24">
+                        <use href="./media/icons.svg#phone"></use>
+                    </svg>
+                    <a href="tel:+34644825983" class="nav-link">
+                        {{ header_settings.phone }}
+                    </a>
+                </li>
+                <li>
+                    <div class="divider"></div>
+                </li>
+                <li>
+                    <svg class="icon" width="24" height="24">
+                        <use href="./media/icons.svg#lang-select"></use>
+                    </svg>
+                    <div class="lang-select">
+                        <p>UA</p>
+                        <svg class="icon" width="8" height="8">
+                            <use href="./media/icons.svg#dropdown"></use>
+                        </svg>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="modal-overlay">
+    <nav class="modal-nav">
+        <ul class="modal-menu">
+            <li>
+                <a href="mailto:star.creatiff@gmail.com" class="nav-link">
+                    {{ header_settings.email }}
+                </a>
+                <svg class="icon" width="24" height="24">
+                    <use href="./media/icons.svg#mail"></use>
+                </svg>
+            </li>
+            <li>
+                <a href="tel:+34644825983" class="nav-link">
+                    {{ header_settings.phone }}
+                </a>
+                <svg class="icon" width="24" height="24">
+                    <use href="./media/icons.svg#phone"></use>
+                </svg>
+            </li>
+            <li>
+                <div class="lang-select">
+                    <p>UA</p>
+                    <svg class="icon" width="8" height="8">
+                        <use href="./media/icons.svg#dropdown"></use>
+                    </svg>
+                </div>
+                <svg class="icon" width="24" height="24">
+                    <use href="./media/icons.svg#lang-select"></use>
+                </svg>
+            </li>
+        </ul>
+    </nav>
+</div>

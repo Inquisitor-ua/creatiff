@@ -1,0 +1,180 @@
+svg {
+    display: block;
+}
+
+header {
+    background: linear-gradient(90deg, #4f6722 30.73%, #84a44a 100%);
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+header>.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 360px;
+}
+
+.brand {
+    display: flex;
+    gap: 12px;
+    flex-direction: row;
+    align-items: center;
+    font-family: "Segoe Script", sans-serif;
+}
+
+.brand>img {
+    width: 48px;
+    height: 48px;
+}
+
+.brand-text>p {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+}
+
+.header-nav {
+    fill: #fff;
+}
+
+.modal-menu,
+.header-menu {
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+    gap: 32px;
+}
+.header-menu {
+    display: none;
+}
+
+.header-menu>li,
+.modal-menu>li {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+}
+.header-menu .nav-link {
+    color: #fff;
+}
+.modal-menu .nav-link {
+    color: black;
+}
+
+.lang-select {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    
+    cursor: pointer;
+}
+.header-menu .lang-select {
+    color: #fff;
+}
+
+/* #region modal */
+
+.modal-overlay {
+    background-color: #FCFCFC;
+    opacity: 0;
+    position: fixed;
+    top: 72px;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 100;
+}
+.modal-overlay.is-open {
+    opacity: 1;
+}
+
+.modal-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 16px;
+    padding-right: 16px;
+}
+
+.modal-menu>li {
+    justify-content: end;
+    fill: #4f6722;
+}
+.modal-menu .lang-select .icon {
+    fill: black;
+}
+
+/* #endregion modal */
+
+@media screen and (min-width: 1440px) {
+    header {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    header>.container {
+        padding-left: 104px;
+        padding-right: 104px;
+        width: 1440px;
+    }
+
+    .brand {
+        gap: 16px;
+    }
+
+    .brand>img {
+        width: 104px;
+        height: 104px;
+    }
+
+    .brand-text>p {
+        font-size: 24px;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    .header-menu {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .divider {
+        border: 1px solid #fff;
+        width: 0px;
+        height: 30px;
+    }
+}
