@@ -3,6 +3,7 @@ from django.db import models
 from wagtail.models import Page
 from wagtail.admin.panels import TitleFieldPanel, FieldPanel
 from wagtail.snippets.models import register_snippet
+from wagtail.fields import RichTextField
 
 # Create your models here.
 class ContactModel(models.Model):
@@ -24,9 +25,10 @@ class HomePage(Page):
 
     parent_page_types = ['wagtailcore.Page']
 
-    content_panels = [
-        TitleFieldPanel("title"),
-        FieldPanel("slug"),
+    rtfbody = RichTextField(verbose_name = "Body", blank = True, null = True)
+
+    content_panels = Page.content_panels + [
+        FieldPanel("rtfbody"),
     ]
 
     subpage_types = []

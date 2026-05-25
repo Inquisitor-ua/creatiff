@@ -26,7 +26,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main',
+    'django.contrib.postgres',
+
+    'wagtail_localize',
+    'wagtail_localize.locales',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -43,6 +46,8 @@ INSTALLED_APPS = [
 
     'modelcluster',
     'taggit',
+
+    'main',
 ]
 
 MIDDLEWARE = [
@@ -119,9 +124,17 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
+USE_L10N = True
 
 USE_TZ = True
 
+LANGUAGES = [
+    ('ru', 'Russian'),
+    ('en', 'English'),
+    ('es', 'Spanish'),
+]
+
+WAGTAIL_I18N_ENABLED = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
