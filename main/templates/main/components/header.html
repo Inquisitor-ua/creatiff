@@ -10,13 +10,17 @@
         </div>
         <nav class="header-nav">
             <svg class="icon hamburger-menu" width="32" height="32">
+{#               TODO: use static <use href="{% static 'main/icons.svg' %}#hamburger-menu"></use>#}
                 <use href="./media/icons.svg#hamburger-menu"></use>
             </svg>
             <ul class="header-menu">
+{#               TODO: This code is duplicated (same as line 57). Consider extracting it into an include#}
                 <li>
                     <svg class="icon" width="24" height="24">
                         <use href="./media/icons.svg#mail"></use>
                     </svg>
+                    use
+{#                    TODO: Email value should come from the backend/admin settings instead of being hardcoded#}
                     <a href="mailto:star.creatiff@gmail.com" class="nav-link">
                         {{ header_settings.email }}
                     </a>

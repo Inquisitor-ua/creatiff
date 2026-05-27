@@ -3,10 +3,11 @@
     padding: 72px 104px;
     color: #FFFFFF
 }
+/* TODO: Avoid styling by tag selector — it creates tight coupling with markup*/
 .ContactForm h2{
     text-align: center;
     font-size: 40px;
-    font-style: bold;
+    /*font-style: bold;*/
     font-weight: 700;
     line-height: 125%;
     font-family: "Inter", sans-serif;
@@ -43,7 +44,8 @@
     display: inline-block;
     font-family: "Inter", sans-serif;
     font-weight: 500;
-    font-style: medium;
+    /*Mismatched property value*/
+    /*font-style: medium;*/
     font-size: 24px;
     line-height: 125%;
     letter-spacing: 0%;
@@ -52,7 +54,7 @@
 .field-wrapper span{
     font-family: "Inter", sans-serif;
     font-weight: 500;
-    font-style: Medium;
+    /*font-style: Medium;*/
     font-size: 24px;
     line-height: 125%;
     letter-spacing: 0%;
@@ -68,7 +70,7 @@
     border-color: #ffffff40;
     font-family: Inter;
     font-weight: 400;
-    font-style: Regular;
+    /*font-style: Regular;*/
     font-size: 20px;
     line-height: 125%;
     letter-spacing: 0%;
