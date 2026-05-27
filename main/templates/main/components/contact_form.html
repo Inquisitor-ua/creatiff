@@ -1,46 +1,43 @@
-<div class="ContactForm">
-    <h2>ВИНИКЛИ ПИТАННЯ? НАПИШИ НАМ</h2>
-    <form method="post" action="{% url 'process_contact_form' %}">
-        {% csrf_token %}
-
-        <div class="form-wrapper">
-            <div class="form-row">
-                <div class="field-wrapper">
-                    <label for="{{ form.name.id_for_label }}">{{ form.name.label }}<span>*</span></label><br>
-                    {{ form.name }}
-                    {% if form.name.errors %}
-                        <span class="error">{{ form.name.errors }}</span>
-                    {% endif %}
+<section class="ContactForm">
+    <div class="container">
+        <h2>¿TIENE PREGUNTAS? ESCRÍBANOS</h2>
+        <form method="post" action="{% url 'process_contact_form' %}">
+            {% csrf_token %}
+            <div class="form-wrapper">
+                <div class="form-row">
+                    <div class="field-wrapper">
+                        <label for="{{ form.name.id_for_label }}">{{ form.name.label }}<span>*</span></label><br>
+                        {{ form.name }}
+                        {% if form.name.errors %}
+                            <span class="error">{{ form.name.errors }}</span>
+                        {% endif %}
+                    </div>
+                    <div class="field-wrapper">
+                        <label for="{{ form.email.id_for_label }}">{{ form.email.label }}<span>*</span></label><br>
+                        {{ form.email }}
+                        {% if form.email.errors %}
+                            <span class="error">{{ form.email.errors }}</span>
+                        {% endif %}
+                    </div>
+                    <div class="field-wrapper">
+                        <label for="{{ form.phone.id_for_label }}">{{ form.phone.label }}</label><br>
+                        {{ form.phone }}
+                        {% if form.phone.errors %}
+                            <span class="error">{{ form.phone.errors }}</span>
+                        {% endif %}
+                    </div>
                 </div>
-
-                <div class="field-wrapper">
-                    <label for="{{ form.email.id_for_label }}">{{ form.email.label }}<span>*</span></label><br>
-                    {{ form.email }}
-                    {% if form.email.errors %}
-                        <span class="error">{{ form.email.errors }}</span>
-                    {% endif %}
+                <div class="form-row form-message">
+                    <div class="field-wrapper full-width">
+                        <label for="{{ form.message.id_for_label }}">{{ form.message.label }}</label><br>
+                        {{ form.message }}
+                        {% if form.message.errors %}
+                            <span class="error">{{ form.message.errors }}</span>
+                        {% endif %}
+                    </div>
                 </div>
-
-                <div class="field-wrapper">
-                    <label for="{{ form.phone.id_for_label }}">{{ form.phone.label }}</label><br>
-                    {{ form.phone }}
-                    {% if form.phone.errors %}
-                        <span class="error">{{ form.phone.errors }}</span>
-                    {% endif %}
-                </div>
+                <button type="submit" class="contact-form-button">Confirmar y enviar</button>
             </div>
-
-            <div class="form-row">
-                <div class="field-wrapper full-width">
-                    <label for="{{ form.message.id_for_label }}">{{ form.message.label }}</label><br>
-                    {{ form.message }}
-                    {% if form.message.errors %}
-                        <span class="error">{{ form.message.errors }}</span>
-                    {% endif %}
-                </div>
-            </div>
-
-            <button type="submit" class="contact-form-button">ПІДТВЕРДИТИ ТА НАДІСЛАТИ</button>
-        </div>
-    </form>
-</div>
+        </form>
+    </div>
+</section>
