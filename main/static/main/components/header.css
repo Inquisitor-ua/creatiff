@@ -103,6 +103,8 @@ nav {
 /* #region modal */
 
 .modal-overlay {
+    display: none;
+    /* Изменить позже! */
     background-color: #FCFCFC;
     opacity: 0;
     position: fixed;
