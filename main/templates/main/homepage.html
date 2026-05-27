@@ -1,6 +1,6 @@
 {% extends "main/base.html" %}
 
-{% load static wagtailimages_tags my_components %}
+{% load static wagtailcore_tags wagtailimages_tags my_components i18n %}
 
 {% block title %}Home{% endblock %}
 
@@ -13,7 +13,26 @@
 {% endblock %}
 
 {% block content %}
-    {% header %}
+    <!-- Language choose -->
+    {% for language_code, language_name in LANGUAGES %}
+        {% get_language_info for language_code as lang %}
+
+        {% language language_code %}
+            <a href="{% pageurl page.localized %}" rel="alternate" hreflang="{{ language_code }}">
+                {{ lang.code|upper }}
+            </a>
+        {% endlanguage %}
+    {% endfor %}
+
+    <!-- Posts tiles -->
+    {% for post in posts %}
+        <div>
+            {% image post.preview_photo fill-100x100 %}
+            <h3>{{ post.preview_title }}</h3>
+            <p>{{ post.preview_description }}</p>
+            <a href="{% pageurl post %}">Детальніше</a>
+        </div>
+    {% endfor %}
 
     {% contact_form %}
 

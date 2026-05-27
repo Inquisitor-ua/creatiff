@@ -1,0 +1,23 @@
+{% extends "main/base.html" %}
+
+{% load static wagtailcore_tags wagtailimages_tags my_components i18n %}
+
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'main/homepage.css' %}">
+<link rel="stylesheet" href="{% static 'main/base.css' %}">
+<link rel="stylesheet" href="{% static 'main/components/contact_form.css' %}">
+<link rel="stylesheet" href="{% static 'main/components/header.css' %}">
+<link rel="stylesheet" href="{% static 'main/components/footer.css' %}">
+{% endblock %}
+
+{% block content %}
+    {% header %}
+
+    {{ page.body }}
+
+    {% contact_form %}
+
+    {% footer %}
+{% endblock %}

@@ -1,4 +1,4 @@
-{% load static wagtailimages_tags my_components %}
+{% load static wagtailcore_tags wagtailimages_tags my_components i18n %}
 <header>
     <div class="container">
         <div class="brand">
@@ -10,12 +10,12 @@
         </div>
         <nav class="header-nav">
             <svg class="icon hamburger-menu" width="32" height="32">
-                <use href="./media/icons.svg#hamburger-menu"></use>
+                <use href="/media/icons.svg#hamburger-menu"></use>
             </svg>
             <ul class="header-menu">
                 <li>
                     <svg class="icon" width="24" height="24">
-                        <use href="./media/icons.svg#mail"></use>
+                        <use href="/media/icons.svg#mail"></use>
                     </svg>
                     <a href="mailto:star.creatiff@gmail.com" class="nav-link">
                         {{ header_settings.email }}
@@ -23,7 +23,7 @@
                 </li>
                 <li>
                     <svg class="icon" width="24" height="24">
-                        <use href="./media/icons.svg#phone"></use>
+                        <use href="/media/icons.svg#phone"></use>
                     </svg>
                     <a href="tel:+34644825983" class="nav-link">
                         {{ header_settings.phone }}
@@ -34,16 +34,27 @@
                 </li>
                 <li>
                     <svg class="icon" width="24" height="24">
-                        <use href="./media/icons.svg#lang-select"></use>
+                        <use href="/media/icons.svg#lang-select"></use>
                     </svg>
                     <div class="lang-select">
                         <p>UA</p>
                         <svg class="icon" width="8" height="8">
-                            <use href="./media/icons.svg#dropdown"></use>
+                            <use href="/media/icons.svg#dropdown"></use>
                         </svg>
                     </div>
                 </li>
             </ul>
+
+            <!-- Language choose -->
+            {% for language_code, language_name in LANGUAGES %}
+                {% get_language_info for language_code as lang %}
+
+                {% language language_code %}
+                    <a href="{% pageurl page.localized %}" rel="alternate" hreflang="{{ language_code }}">
+                        {{ lang.code|upper }}
+                    </a>
+                {% endlanguage %}
+            {% endfor %}
         </nav>
     </div>
 </header>
@@ -55,7 +66,7 @@
                     {{ header_settings.email }}
                 </a>
                 <svg class="icon" width="24" height="24">
-                    <use href="./media/icons.svg#mail"></use>
+                    <use href="/media/icons.svg#mail"></use>
                 </svg>
             </li>
             <li>
@@ -63,18 +74,18 @@
                     {{ header_settings.phone }}
                 </a>
                 <svg class="icon" width="24" height="24">
-                    <use href="./media/icons.svg#phone"></use>
+                    <use href="/media/icons.svg#phone"></use>
                 </svg>
             </li>
             <li>
                 <div class="lang-select">
                     <p>UA</p>
                     <svg class="icon" width="8" height="8">
-                        <use href="./media/icons.svg#dropdown"></use>
+                        <use href="/media/icons.svg#dropdown"></use>
                     </svg>
                 </div>
                 <svg class="icon" width="24" height="24">
-                    <use href="./media/icons.svg#lang-select"></use>
+                    <use href="/media/icons.svg#lang-select"></use>
                 </svg>
             </li>
         </ul>

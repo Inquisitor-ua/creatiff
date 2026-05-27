@@ -1,8 +1,12 @@
 from django.db import models
 
 from wagtail.models import Page
-from wagtail.admin.panels import TitleFieldPanel, FieldPanel
-from wagtail.snippets.models import register_snippet
+from wagtail.admin.panels import FieldPanel
+from wagtail.images.blocks import ImageChooserBlock
+from wagtail.blocks import RichTextBlock
+from wagtail.fields import RichTextField, StreamField
+
+# from .blocks import HeaderSettingsBlock
 
 # Create your models here.
 class ContactModel(models.Model):
@@ -19,58 +23,50 @@ class ContactModel(models.Model):
         verbose_name = "Contact form"
         verbose_name_plural = "Contact forms"
 
+
+# Pages
 class HomePage(Page):
     max_count = 1
 
     parent_page_types = ['wagtailcore.Page']
 
-    content_panels = [
-        TitleFieldPanel("title"),
-        FieldPanel("slug"),
+    body = StreamField([
+        ('image', ImageChooserBlock())
+    ], use_json_field=True, blank=True)
+
+    content_panels = Page.content_panels + [
+        FieldPanel("body"),
+    ]
+
+    subpage_types = ['main.ContentPage']
+
+    template = 'main/homepage.html'
+
+    def get_context(self, request):
+        context = super().get_context(request)
+        posts = ContentPage.objects.live().filter(locale=self.locale)
+        context['posts'] = posts
+        return context
+
+class ContentPage(Page):
+    parent_page_types = ['main.HomePage']
+
+    preview_image = models.ForeignKey('wagtailimages.Image', null=True, blank=True, on_delete=models.SET_NULL, related_name='+', verbose_name="Preview card image")
+    preview_title = models.CharField(max_length=256, verbose_name='Preview card title')
+    preview_description = models.CharField(max_length=512, verbose_name="Preview card description")
+
+    body = StreamField([
+        ('image', ImageChooserBlock()),
+        ('rtfbody', RichTextBlock())
+    ], use_json_field=True, blank=True)
+
+    content_panels = Page.content_panels + [
+        FieldPanel("preview_title"),
+        FieldPanel("preview_image"),
+        FieldPanel("preview_description"),
+        FieldPanel("body"),
     ]
 
     subpage_types = []
 
-    template = 'main/homepage.html'
-
-@register_snippet
-class HeaderSettings(models.Model):
-    title = models.CharField(max_length=128, verbose_name="Title/name of the company")
-    subtitle = models.CharField(max_length=128, verbose_name="Subtitle of the company")
-    logo = models.ImageField(upload_to='header_logo/', verbose_name="Logo of the company")
-    phone = models.CharField(max_length=16, verbose_name="Phone number")
-    email = models.EmailField(verbose_name="Email")
-
-    panels = [
-        FieldPanel("title"),
-        FieldPanel("subtitle"),
-        FieldPanel("logo"),
-        FieldPanel("phone"),
-        FieldPanel("email"),
-    ]
-
-    def __str__(self):
-        return self.title
-
-    class Meta:
-        verbose_name = "Header settings"
-
-@register_snippet
-class FooterSettings(models.Model):
-    email = models.EmailField(verbose_name="Email")
-    phone = models.CharField(max_length=16, verbose_name="Phone number")
-    instagram_url = models.CharField(max_length=512, verbose_name="Instagram URL")
-    facebook_url = models.CharField(max_length=512, verbose_name="Facebook URL")
-
-    panels = [
-        FieldPanel('email'),
-        FieldPanel('phone'),
-        FieldPanel('instagram_url'),
-        FieldPanel('facebook_url'),
-    ]
-
-    def __str__(self):
-        return self.email
-
-    class Meta:
-        verbose_name = "Footer settings"
+    template = 'main/page.html'
