@@ -2,21 +2,21 @@ from django import forms
 
 class ContactForm(forms.Form):
     name = forms.CharField(
-        label = "Your name",
+        label = "Su nombre",
         widget = forms.TextInput(attrs={
             'class': 'form-control',
-            'placeholder': "Enter your name"
+            'placeholder': "Escriban su nombre"
         })
     )
     email = forms.CharField(
-        label = "Your email",
+        label = "Su correo electrónico",
         widget = forms.EmailInput(attrs={
             'class': 'form-control',
             'placeholder': "email@example.com"
         })
     )
     phone = forms.CharField(
-        label = 'Your phone',
+        label = 'Su teléfono',
         required = False,
         widget = forms.TextInput(attrs={
             'class': 'form-control',
@@ -24,10 +24,10 @@ class ContactForm(forms.Form):
         })
     )
     message = forms.CharField(
-        label = 'Your message',
+        label = 'Su mensaje',
         widget = forms.Textarea(attrs={
             'class': 'form-control',
-            'placeholder': 'Please describe your question here...',
+            'placeholder': 'Describa su consulta aquí...',
             'rows': 4,
         })
     )

@@ -9,17 +9,6 @@ header {
     padding-bottom: 12px;
 }
 
-header>.container {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 16px;
-    padding-right: 16px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 360px;
-}
-
 .brand {
     display: flex;
     gap: 12px;
@@ -142,12 +131,6 @@ nav {
     header {
         padding-top: 24px;
         padding-bottom: 24px;
-    }
-
-    header>.container {
-        padding-left: 104px;
-        padding-right: 104px;
-        width: 1440px;
     }
 
     .brand {
