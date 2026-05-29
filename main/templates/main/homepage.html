@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="{% static 'main/components/contact_form.css' %}">
 <link rel="stylesheet" href="{% static 'main/components/header.css' %}">
 <link rel="stylesheet" href="{% static 'main/components/footer.css' %}">
+<link rel="stylesheet" href="{% static 'main/components/hero.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -23,6 +24,8 @@
             </a>
         {% endlanguage %}
     {% endfor %}
+
+    {% include "main/components/hero.html" %}
 
     <!-- Posts tiles -->
     <section class="section-post-list">
