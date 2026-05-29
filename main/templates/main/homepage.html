@@ -25,16 +25,26 @@
     {% endfor %}
 
     <!-- Posts tiles -->
-    {% for post in posts %}
-        <div>
-            {% image post.preview_photo fill-100x100 %}
-            <h3>{{ post.preview_title }}</h3>
-            <p>{{ post.preview_description }}</p>
-            <a href="{% pageurl post %}">Детальніше</a>
+    <section class="section-post-list">
+        <div class="container">
+            <ul class="post-list">
+            {% for post in posts %}
+                <li>
+                    {% image post.preview_photo fill-100x100 %}
+                    <div class="post-list-text-wrapper">
+                        <div class="post-list-text">
+                            <h3>{{ post.preview_title }}</h3>
+                            <p>{{ post.preview_description }}</p>
+                        </div>
+                        <a href="{% pageurl post %}">Leer Más</a>
+                    </div>
+                </li>
+            {% endfor %}
+            </ul>
+            <button type="button">Cargar más</button>
         </div>
-    {% endfor %}
+    </section>
+    <!-- {% contact_form %} -->
 
-    {% contact_form %}
-
-    {% footer %}
+    <!-- {% footer %} -->
 {% endblock %}

@@ -1,89 +1,113 @@
-footer{
+footer {
     background-color: #282E1B;
-    padding: 72px 208px;
+    padding-top: 48px;
+    padding-bottom: 48px;
 }
-.footer-content{
+footer>.container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 32px;
+    gap: 24px;
     color: #FFFFFF;
 }
-.footer-info{
+.footer-info {
     width: 100%;
 }
-.footer-content h2{
-    font-family: "Inter", sans-serif;
+.footer-info h2{
     font-weight: 500;
-    font-style: Medium;
-    font-size: 24px;
-    line-height: 125%;
-    letter-spacing: 0%;
-    margin-bottom: 32px;
+    font-size: 16px;
+    margin-bottom: 24px;
 }
-.footer-adress{
+.footer-address {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 12px;
 }
-.footer-social{
+.footer-social {
     color: #FFFFFF;
     text-decoration: none;
     display: flex;
     flex-direction: row;
     gap: 12px;
     align-items: center;
-    font-family: "Inter", sans-serif;
     font-weight: 500;
-    font-style: Medium;
-    font-size: 20px;
+    font-size: 14px;
     line-height: 150%;
     letter-spacing: 0%;
     transition: all 0.3s ease;
 }
-.footer-social:hover{
+.footer-social:hover {
     cursor: pointer;
     color: #c9c9c9;
 }
-.footer-social span{
+.footer-social span {
     width: 24px;
     height: 24px;
 }
 
-.divider{
+.divider {
     border: 0;
     border-top: 1px solid #FFFFFF40;
     width: 100%;
 }
 
-.footer-frame{
+.footer-frame {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 24px;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
-.footer-logo{
+.footer-logo {
     display: flex;
     flex-direction: row;
     gap: 16px;
     align-items: center;
 }
-.footer-logo span{
-    font-family: "Inter", sans-serif;
+.footer-logo span {
     font-weight: 700;
-    font-style: Bold;
     font-size: 20px;
     line-height: 150%;
     letter-spacing: 0%;
     text-transform: uppercase;
 }
-.footer-text{
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-style: regular;
-    font-size: 20px;
-    line-height: 150%;
-    letter-spacing: 0%;
+.footer-text {
+    font-size: 12px;
+}
+.footer-logo {
+    display: none;
+}
 
+@media screen and (min-width: 1440px) {
+    footer>.container {
+        gap: 32px;
+    }
+
+    .footer-info h2{
+        font-size: 24px;
+        margin-bottom: 32px;
+    }
+
+    .footer-social {
+        font-size: 20px;
+    }
+
+    .footer-frame {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    footer .brand {
+        display: none;
+    }
+    .footer-logo {
+        display: flex;
+    }
+    .footer-text {
+        font-size: 20px;
+    }
 }

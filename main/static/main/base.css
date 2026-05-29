@@ -11,9 +11,25 @@
     margin-right: auto;
     padding-left: 16px;
     padding-right: 16px;
+}
+
+.brand {
     display: flex;
+    gap: 12px;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    font-family: "Segoe Script", sans-serif;
+}
+.brand>img {
+    width: 48px;
+    height: 48px;
+}
+.brand-text>p {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #fff;
 }
 
 @media screen and (min-width: 1440px) {
