@@ -9,6 +9,12 @@ header {
     padding-bottom: 12px;
 }
 
+header>.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .brand {
     display: flex;
     gap: 12px;

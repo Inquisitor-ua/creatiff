@@ -1,0 +1,131 @@
+.hero {
+    padding-top: 32px;
+    background: linear-gradient(90deg, #4f6722 30.73%, #84a44a 100%);
+}
+
+.hero>.container {
+    overflow-y: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    
+    max-width: 624px;
+}
+.hero-text-wrapper>h1 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 125%;
+    text-transform: uppercase;
+    color: #fff;
+}
+.hero-text-wrapper p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: rgba(255, 255, 255, 0.75);
+}
+.hero-text-wrapper>button {
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 125%;
+    text-transform: uppercase;
+
+    background: #ff9300;
+    width: 100%;
+    padding: 18px 0;
+    border-radius: 64px;
+    border: none;
+    margin-bottom: 16px;
+}
+
+.hero-stats-list {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+}
+.hero-stats-list>li {
+    max-width: 85px;
+}
+p.hero-stats-num {
+    color: #fff;
+    font-weight: 500;
+    font-size: 28px;
+}
+span.highlight {
+    color: #ff9300;
+}
+
+.img-container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 321px;
+    height: 332px;
+}
+
+.img-placeholder {
+    position: absolute;
+    bottom: -63px;
+    border: 9.87px solid rgba(255, 255, 255, 0.25);
+    border-radius: 158px 158px 10px 10px;
+    width: 321px;
+    height: 332px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (min-width: 1440px) {
+    .hero>.container {
+        display: flex;
+    }
+
+    .hero {
+        padding-top: 47px;
+    }
+    .hero-text-wrapper {
+        gap: 32px;
+    }
+    .hero-text-wrapper>h1 {
+        font-size: 48px;
+    }
+    .hero-text-wrapper p {
+        font-size: 20px;
+    }
+    .hero-text-wrapper>button {
+        font-size: 20px;
+        padding: 15.5px 32px;
+        width: fit-content;
+        margin-bottom: 21px;
+    }
+    .hero-stats-list {
+        justify-content: start;
+        gap: 64px;
+        list-style-type: none;
+        padding: 0;
+    }
+    p.hero-stats-num {
+        font-size: 48px;
+    }
+
+    .img-container {
+        position: relative;
+        margin-right: 0;
+        width: 520px;
+        height: 646px; 
+    }
+    .img-placeholder {
+        position: absolute;
+        border-width: 16px;
+        bottom: -63px;
+        border-radius: 256px 256px 16px 16px;
+        width: 520px;
+        height: 670px;
+        box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.25);
+    }
+}

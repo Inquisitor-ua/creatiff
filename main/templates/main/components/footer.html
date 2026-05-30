@@ -1,9 +1,9 @@
-{% load wagtailimages_tags %}
+{% load static wagtailimages_tags my_components %}
 <footer>
-    <div class="footer-content">
+    <div class="container">
         <div class="footer-info">
-            <h2>Зворотній зв'язок</h2>
-            <div class="footer-adress">
+            <h2>Retroalimentación</h2>
+            <div class="footer-address">
                 <div class="footer-social">
                     <span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -72,6 +72,7 @@
         <hr class="divider"></hr>
 
         <div class="footer-frame">
+            <!-- desktop only -->
             <div class="footer-logo">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="48" height="48" rx="24" fill="white"/>
@@ -115,9 +116,17 @@
 
                 <span class="footer-naming">STAR Creatiff - realizamos ideas</span>
             </div>
+            <!-- mobile only -->
+            <div class="brand">
+                <img src="{{ footer_settings.logo.url }}" alt="{{ footer_settings.title }}">
+                <div class="brand-text">
+                    <p>{{ footer_settings.title }}</p>
+                    <p>{{ footer_settings.subtitle }}</p>
+                </div>
+            </div>
 
             <div class="footer-text">
-                © 2024 Star Creatiff. All Rights Reserved.
+                © 2024 Star Creatiff. Todos los derechos reservados.
             </div>
         </div>
     </div>
