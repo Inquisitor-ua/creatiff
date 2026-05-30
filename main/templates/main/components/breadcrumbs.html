@@ -1,0 +1,9 @@
+{% load wagtailcore_tags %}
+
+<!-- Example  -->
+<div>
+    {% for ancestor in ancestors %}
+        <a href="{% pageurl ancestor %}">{{ ancestor.title }}</a> <span> > </span>
+    {% endfor %}
+    <span>{{ current_page.title }}</span>
+</div>

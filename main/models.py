@@ -6,6 +6,8 @@ from wagtail.images.blocks import ImageChooserBlock
 from wagtail.blocks import RichTextBlock
 from wagtail.fields import RichTextField, StreamField
 
+from . import blocks
+
 # from .blocks import HeaderSettingsBlock
 
 # Create your models here.
@@ -48,6 +50,7 @@ class HomePage(Page):
         context['posts'] = posts
         return context
 
+
 class ContentPage(Page):
     parent_page_types = ['main.HomePage']
 
@@ -57,7 +60,11 @@ class ContentPage(Page):
 
     body = StreamField([
         ('image', ImageChooserBlock()),
-        ('rtfbody', RichTextBlock())
+        ('rtfbody', RichTextBlock()),
+        ('images2p1', blocks.Images2p1Block()),
+        ('images3p2', blocks.Images3p2Block()),
+        ('gallery', blocks.GalleryBlock()),
+        ('imagestext', blocks.ImagetextBlock()),
     ], use_json_field=True, blank=True)
 
     content_panels = Page.content_panels + [
