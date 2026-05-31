@@ -1,11 +1,57 @@
 from django.core.management.base import BaseCommand
 from django.utils.text import slugify
 from wagtail.models import Page, Site
-from main.models import HomePage, ContentPage 
+from main.models import CompanySettings, HomePage, ContentPage 
 
 
 class Command(BaseCommand):
     help = "Automatically creates a homepage, default site setup, and populates content pages."
+
+    def ensure_homepage_hero(self, homepage):
+        hero_payload = [
+            {
+                "type": "hero",
+                "value": {
+                    "caption_first_row": "STAR CREATIFF",
+                    "caption_second_row": "Hacemos de todo",
+                    "big_paragraph": "Nuestra empresa se ha creado para satisfacer cualquier capricho y deseo creativo de nuestros clientes. Fabricaremos en nuestra propia base e instalaremos todo lo que se le ocurra.",
+                    "small_paragraph": "Implementamos todas las soluciones técnicas.",
+                    "button": "Realizar idea",
+                    "statistics": [
+                        {"stats_number": "9K", "stats_text": "Clientes Felices"},
+                        {"stats_number": "2K", "stats_text": "Muebles Vendidos"},
+                        {"stats_number": "28", "stats_text": "Estructuras construidas"},
+                    ],
+                    # 'image' is intentionally omitted here — if you have an image id,
+                    # you can add: 'image': <wagtail_image_id>
+                },
+            }
+        ]
+
+        try:
+            # Only set hero if it's empty to avoid overwriting manual changes
+            current = getattr(homepage, 'hero', None)
+            is_empty = not current or len(current) == 0
+            if is_empty:
+                homepage.hero = hero_payload
+                homepage.save_revision().publish()
+        except Exception as e:
+            self.stdout.write(self.style.WARNING(f'Failed to set hero block: {e}'))
+
+    def ensure_company_settings(self, site):
+        defaults = {
+            'title': "STAR Creatiff",
+            'subtitle': "realizamos ideas",
+            'phone': "+34 644 82 59 83",
+            'email': "star.creatiff@gmail.com",
+            'facebook': "https://facebook.com",
+            'instagram': "https://instagram.com",
+        }
+
+        CompanySettings.objects.update_or_create(
+            site=site,
+            defaults=defaults,
+        )
 
     def handle(self, *args, **options):
         # ----------------------------------------------------
@@ -34,12 +80,21 @@ class Command(BaseCommand):
                 site.root_page = homepage
                 site.save()
         else:
-            Site.objects.create(
+            site = Site.objects.create(
                 hostname="localhost",
                 port=8000,
                 root_page=homepage,
                 is_default_site=True,
             )
+
+        self.ensure_company_settings(site)
+
+        # Попытка автозаполнить блок hero на главной
+        try:
+            self.ensure_homepage_hero(homepage)
+        except Exception:
+            # Не критично — продолжим, если автозаполнение не сработало
+            pass
 
         # Удаляем стандартную заглушку Wagtail, если она есть
         Page.objects.filter(slug="home").delete()

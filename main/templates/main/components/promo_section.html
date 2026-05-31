@@ -1,0 +1,23 @@
+<!-- Example -->
+{% load wagtailimages_tags %}
+<div style="display: flex; flex-direction: row;">
+    <div style="display: flex; flex-direction: column;">
+        <h2>{{ value.title }}</h2>
+        <p>{{ value.description }}</p>
+        {% for benefit in value.benefits %}
+            <div style="display: flex; flex-direction: row;">
+                <svg>ICON</svg>
+                <div>
+                    <h4>{{ benefit.title }}</h4>
+                    <p>{{ benefit.text }}</p>
+                </div>
+            </div>
+        {% endfor %}
+        <p>{{ value.cta_text }}</p>
+        <a>{{ value.button_text }}</a>
+    </div>
+    <div>
+        {% image value.image width-400 as img %}
+        <img src="{{ img.url }}">
+    </div>
+</div>

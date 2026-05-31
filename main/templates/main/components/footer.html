@@ -1,4 +1,6 @@
 {% load static wagtailimages_tags my_components %}
+
+{% image settings.main.CompanySettings.logo original as logo %}
 <footer>
     <div class="container">
         <div class="footer-info">
@@ -17,7 +19,7 @@
                         </defs>
                         </svg>
                     </span>
-                    {{ footer_settings.email }}
+                    {{ settings.main.CompanySettings.email }}
                 </div>
                 <div class="footer-social">
                     <span>
@@ -32,9 +34,9 @@
                         </defs>
                         </svg>
                     </span>
-                    {{ footer_settings.phone }}
+                    {{ settings.main.CompanySettings.phone }}
                 </div>
-                <a class="footer-social" href="{{ footer_settings.instagram_url }}" target="_blank">
+                <a class="footer-social" href="{{ settings.main.CompanySettings.instagram }}" target="_blank">
                     <span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1_329)">
@@ -51,7 +53,7 @@
                     </span>
                     Instagram
                 </a>
-                <a class="footer-social" href="{{ footer_settings.facebook_url }}" target="_blank">
+                <a class="footer-social" href="{{ settings.main.CompanySettings.facebook }}" target="_blank">
                     <span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1_332)">
@@ -114,19 +116,19 @@
                     <path d="M39.3833 9.09076C39.464 9.01396 39.5917 9.01711 39.6685 9.09779C43.3564 12.9722 45.6204 18.2159 45.6204 23.987C45.6204 27.9198 44.5691 31.6082 42.7319 34.7843C42.6761 34.8807 42.5527 34.9136 42.4563 34.8579C42.3599 34.8021 42.3269 34.6787 42.3827 34.5823C44.1854 31.466 45.2171 27.847 45.2171 23.987C45.2171 18.3235 42.9957 13.1783 39.3763 9.37589C39.2995 9.29521 39.3027 9.16755 39.3833 9.09076Z" fill="#231F20"/>
                 </svg>
 
-                <span class="footer-naming">STAR Creatiff - realizamos ideas</span>
+                <span class="footer-naming">{{ settings.main.CompanySettings.title }} - {{ settings.main.CompanySettings.subtitle }}</span>
             </div>
             <!-- mobile only -->
             <div class="brand">
-                <img src="{{ footer_settings.logo.url }}" alt="{{ footer_settings.title }}">
+                <img src="{{ logo.url }}" alt="{{ settings.main.CompanySettings.title }}">
                 <div class="brand-text">
-                    <p>{{ footer_settings.title }}</p>
-                    <p>{{ footer_settings.subtitle }}</p>
+                    <p>{{ settings.main.CompanySettings.title }}</p>
+                    <p>{{ settings.main.CompanySettings.subtitle }}</p>
                 </div>
             </div>
 
             <div class="footer-text">
-                © 2024 Star Creatiff. Todos los derechos reservados.
+                {{ footer_settings.rights }}
             </div>
         </div>
     </div>
