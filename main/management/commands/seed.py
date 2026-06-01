@@ -64,6 +64,7 @@ class Command(BaseCommand):
                 title="Homepage",
                 slug="homepage",
                 live=True,
+                details_button="Details",
             )
             root_page.add_child(instance=homepage)
             self.stdout.write(self.style.SUCCESS("Successfully created HomePage."))
