@@ -6,19 +6,6 @@ from wagtail.snippets.models import register_snippet
 
 @register_snippet
 class HeaderSettings(models.Model):
-    title = models.CharField(max_length=128, verbose_name="Title/name of the company")
-    subtitle = models.CharField(max_length=128, verbose_name="Subtitle of the company")
-    logo = models.ImageField(upload_to='header_logo/', verbose_name="Logo of the company")
-    phone = models.CharField(max_length=16, verbose_name="Phone number")
-    email = models.EmailField(verbose_name="Email")
-
-    panels = [
-        FieldPanel("title"),
-        FieldPanel("subtitle"),
-        FieldPanel("logo"),
-        FieldPanel("phone"),
-        FieldPanel("email"),
-    ]
 
     def get_context(self, request):
         context = super().get_context(request)
@@ -26,28 +13,21 @@ class HeaderSettings(models.Model):
         context["page"] = wagtail_page
         return context
 
-    def __str__(self):
-        return self.title
-
     class Meta:
         verbose_name = "Header settings"
 
 @register_snippet
 class FooterSettings(models.Model):
-    email = models.EmailField(verbose_name="Email")
-    phone = models.CharField(max_length=16, verbose_name="Phone number")
-    instagram_url = models.CharField(max_length=512, verbose_name="Instagram URL")
-    facebook_url = models.CharField(max_length=512, verbose_name="Facebook URL")
+    caption = models.CharField(max_length=128, verbose_name="Footer caption")
+    rights = models.CharField(max_length=128, verbose_name="Rights")
 
     panels = [
-        FieldPanel('email'),
-        FieldPanel('phone'),
-        FieldPanel('instagram_url'),
-        FieldPanel('facebook_url'),
+        FieldPanel('caption'),
+        FieldPanel('rights'),
     ]
 
     def __str__(self):
-        return self.email
+        return self.caption
 
     class Meta:
         verbose_name = "Footer settings"

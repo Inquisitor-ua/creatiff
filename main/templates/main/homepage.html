@@ -25,7 +25,9 @@
         {% endlanguage %}
     {% endfor %}
 
-    {% include "main/components/hero.html" %}
+    <!-- {% include "main/components/hero.html" %} -->
+
+    {{ page.hero }}
 
     <!-- Posts tiles -->
     <section class="section-post-list">
@@ -39,7 +41,7 @@
                             <h3>{{ post.preview_title }}</h3>
                             <p>{{ post.preview_description }}</p>
                         </div>
-                        <a href="{% pageurl post %}">Leer Más</a>
+                        <a href="{% pageurl post %}">{{ page.details_button }}</a>
                     </div>
                 </li>
             {% endfor %}
@@ -47,6 +49,13 @@
             <button type="button">Cargar más</button>
         </div>
     </section>
+
+    {{ page.partners }}
+
+    {{ page.banner }}
+
+    {{ page.promo }}
+
     <!-- {% contact_form %} -->
 
     <!-- {% footer %} -->

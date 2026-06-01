@@ -2,10 +2,11 @@
 <header>
     <div class="container">
         <div class="brand">
-            <img src="{{ header_settings.logo.url }}" alt="{{ header_settings.title }}">
+            {% image settings.main.CompanySettings.logo original as logo %}
+            <img src="{{ logo.url }}" alt="{{ settings.main.CompanySettings.title }}">
             <div class="brand-text">
-                <p>{{ header_settings.title }}</p>
-                <p>{{ header_settings.subtitle }}</p>
+                <p>{{ settings.main.CompanySettings.title }}</p>
+                <p>{{ settings.main.CompanySettings.subtitle }}</p>
             </div>
         </div>
         <nav class="header-nav">
@@ -17,16 +18,16 @@
                     <svg class="icon" width="24" height="24">
                         <use href="/media/icons.svg#mail"></use>
                     </svg>
-                    <a href="mailto:star.creatiff@gmail.com" class="nav-link">
-                        {{ header_settings.email }}
+                    <a href="mailto:{{ settings.main.CompanySettings.email }}" class="nav-link">
+                        {{ settings.main.CompanySettings.email }}
                     </a>
                 </li>
                 <li>
                     <svg class="icon" width="24" height="24">
                         <use href="/media/icons.svg#phone"></use>
                     </svg>
-                    <a href="tel:+34644825983" class="nav-link">
-                        {{ header_settings.phone }}
+                    <a href="tel:{{ settings.main.CompanySettings.phone }}" class="nav-link">
+                        {{ settings.main.CompanySettings.phone }}
                     </a>
                 </li>
                 <li>
@@ -62,16 +63,16 @@
     <nav class="modal-nav">
         <ul class="modal-menu">
             <li>
-                <a href="mailto:star.creatiff@gmail.com" class="nav-link">
-                    {{ header_settings.email }}
+                <a href="mailto:{{ settings.main.CompanySettings.email }}" class="nav-link">
+                    {{ settings.main.CompanySettings.email }}
                 </a>
                 <svg class="icon" width="24" height="24">
                     <use href="/media/icons.svg#mail"></use>
                 </svg>
             </li>
             <li>
-                <a href="tel:+34644825983" class="nav-link">
-                    {{ header_settings.phone }}
+                <a href="tel:{{ settings.main.CompanySettings.phone }}" class="nav-link">
+                    {{ settings.main.CompanySettings.phone }}
                 </a>
                 <svg class="icon" width="24" height="24">
                     <use href="/media/icons.svg#phone"></use>

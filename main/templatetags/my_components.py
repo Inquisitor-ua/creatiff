@@ -24,3 +24,15 @@ def footer(context):
     })
     return context
 
+@register.inclusion_tag('main/components/breadcrumbs.html', takes_context=True)
+def breadcrumbs(context):
+    page = context.get('page')
+    ancestors = []
+    if page:
+        ancestors = page.get_ancestors().live().exclude(depth=1)
+
+    context.update({
+        'ancestors': ancestors,
+        'current_page': page,
+    })
+    return context

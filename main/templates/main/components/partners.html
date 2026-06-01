@@ -1,0 +1,11 @@
+<!-- Example  -->
+{% load wagtailimages_tags %}
+<div style="display: flex; flex-direction: row; justify-content: space-evenly;">
+    {% for partner in value.partners %}
+        <div style="width: fit-content;">
+            {% image partner.partner_logo original as logo %}
+            <img src = "{{ logo.url }}">
+            <span>{{ partner.partner_name }}</span>
+        </div>
+    {% endfor %}
+</div>
