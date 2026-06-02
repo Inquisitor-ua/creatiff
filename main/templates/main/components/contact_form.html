@@ -1,6 +1,6 @@
 <section class="ContactForm">
     <div class="container">
-        <h2>¿TIENE PREGUNTAS? ESCRÍBANOS</h2>
+        <h2>{{ contact_form_settings.title }}</h2>
         <form method="post" action="{% url 'process_contact_form' %}">
             {% csrf_token %}
             <div class="form-wrapper">
@@ -20,7 +20,7 @@
                         {% endif %}
                     </div>
                     <div class="field-wrapper">
-                        <label for="{{ form.phone.id_for_label }}">{{ form.phone.label }}</label><br>
+                        <label for="{{ form.phone.id_for_label }}">{{ form.phone.label }}{% if form.phone.field.required %}<span>*</span>{% endif %}</label><br>
                         {{ form.phone }}
                         {% if form.phone.errors %}
                             <span class="error">{{ form.phone.errors }}</span>
@@ -29,14 +29,16 @@
                 </div>
                 <div class="form-row form-message">
                     <div class="field-wrapper full-width">
-                        <label for="{{ form.message.id_for_label }}">{{ form.message.label }}</label><br>
+                        <label for="{{ form.message.id_for_label }}">{{ form.message.label }}<span>*</span></label><br>
                         {{ form.message }}
                         {% if form.message.errors %}
                             <span class="error">{{ form.message.errors }}</span>
                         {% endif %}
                     </div>
                 </div>
-                <button type="submit" class="contact-form-button">Confirmar y enviar</button>
+                <button type="submit" class="contact-form-button">
+                    {{ contact_form_settings.submit_button_text|default:"Send" }}
+                </button>
             </div>
         </form>
     </div>
