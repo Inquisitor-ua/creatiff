@@ -1,23 +1,59 @@
-<!-- Example -->
+
 {% load wagtailimages_tags %}
-<div style="display: flex; flex-direction: row;">
-    <div style="display: flex; flex-direction: column;">
-        <h2>{{ value.title }}</h2>
-        <p>{{ value.description }}</p>
-        {% for benefit in value.benefits %}
-            <div style="display: flex; flex-direction: row;">
-                <svg>ICON</svg>
-                <div>
-                    <h4>{{ benefit.title }}</h4>
-                    <p>{{ benefit.text }}</p>
-                </div>
+<section class="promo">
+    <div class="container">
+        <!-- {% image value.image width-400 as img %} -->
+        <img src="../../../../media/images/87628ce2e74007577e320044b562c800.jpg">
+        <div class="promo-text-wrapper">
+            <h2>¡Podemos reproducir todo lo que desee!</h2>
+            <div class="promo-text-main">
+                <p>Independientemente de si desea muebles personalizados para el hogar o la oficina, estamos listos para hacer realidad sus deseos. Envíenos una imagen de Pinterest y reproduciremos muebles únicos por encargo, teniendo en cuenta sus deseos y estilo.</p>
+                <ul class="benefits">
+                    <li>
+                        <div class="benefit-head">
+                            <div class="promo-svg">
+                                <svg width="24" height="24" fill="#8EB547">
+                                    <use href="/media/icons.svg#tool"></use>
+                                </svg>
+                            </div>
+                            <h3>Enfoque personalizado</h3>
+                        </div>
+                        <p>
+                            Escuchamos sus necesidades y consideramos todos sus deseos.
+                        </p>
+                    </li>
+                    <li>
+                        <div class="benefit-head">
+                            <div class="promo-svg">
+                                <svg width="24" height="24" fill="#8EB547">
+                                    <use href="/media/icons.svg#tool"></use>
+                                </svg>
+                            </div>
+                            <h3>Creatividad</h3>
+                        </div>
+                        <p>
+                            Combinamos y adaptamos conceptos para crear obras maestras.
+                        </p>
+                    </li>
+                    <li>
+                        <div class="benefit-head">
+                            <div class="promo-svg">
+                                <svg width="24" height="24" fill="#8EB547">
+                                    <use href="/media/icons.svg#tool"></use>
+                                </svg>
+                            </div>
+                            <h3>Responsabilidad</h3>
+                        </div>
+                        <p>
+                            Cumplimos con los plazos establecidos para nuestros trabajos.
+                        </p>
+                    </li>
+                </ul>
+                <p>
+                    Confíenos sus deseos y los convertiremos en realidad. ¡Consulte nuestro portafolio!
+                </p>
+                <button class="promo-button">Contactar con nosotros</button>
             </div>
-        {% endfor %}
-        <p>{{ value.cta_text }}</p>
-        <a>{{ value.button_text }}</a>
+        </div>
     </div>
-    <div>
-        {% image value.image width-400 as img %}
-        <img src="{{ img.url }}">
-    </div>
-</div>
+</section>
