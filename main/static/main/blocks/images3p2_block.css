@@ -1,0 +1,26 @@
+.images3p2 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.images3p2>.first-row,
+.images3p2>.second-row {
+    display: flex;
+    gap: 16px;
+}
+
+.images3p2>.first-row img {
+    width: 192px;
+    height: 235px;
+}
+.images3p2>.first-row img:first-of-type,
+.images3p2>.first-row img:last-of-type,
+.images3p2>.second-row img:first-of-type {
+    width: 296px;
+    height: 235px;
+}
+
+.images3p2>.second-row img:last-of-type {
+    width: 504px;
+    height: 235px;
+}

@@ -1,25 +1,5 @@
-<!-- Example  -->
-{% load wagtailimages_tags %}
-<style>
-    .media-grid-section {
-    display: table;
-    width: 100%;
-    margin-bottom: 30px;
-    table-layout: fixed;
-    }
-    .media-grid-column {
-        display: table-cell;
-        vertical-align: top;
-        width: 50%;
-    }
 
-    .media-grid-section.img-right {
-        direction: rtl;
-    }
-    .media-grid-section.img-right .media-grid-column {
-        direction: ltr;
-    }
-</style>
+{% load wagtailimages_tags %}
 
 <div class="media-grid-section {{ value.layout }}">
 

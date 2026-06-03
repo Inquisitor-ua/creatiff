@@ -31,35 +31,37 @@
                     </a>
                 </li>
                 <li>
-                    <div class="divider"></div>
+                    <div class="header-divider"></div>
                 </li>
                 <li>
                     <svg class="icon" width="24" height="24">
                         <use href="/media/icons.svg#lang-select"></use>
                     </svg>
                     <div class="lang-select">
-                        <p>UA</p>
+                        UA
                         <svg class="icon" width="8" height="8">
                             <use href="/media/icons.svg#dropdown"></use>
                         </svg>
                     </div>
+                    <div class="modal-lang-overlay">
+                        <div class="modal-lang-select">
+                            {% for language_code, language_name in LANGUAGES %}
+                                {% get_language_info for language_code as lang %}
+
+                                {% language language_code %}
+                                    <a href="{% pageurl page.localized %}" rel="alternate" hreflang="{{ language_code }}">
+                                        {{ lang.code|upper }}
+                                    </a>
+                                {% endlanguage %}
+                            {% endfor %}
+                        </div>
+                    </div>
                 </li>
             </ul>
-
-            <!-- Language choose -->
-            {% for language_code, language_name in LANGUAGES %}
-                {% get_language_info for language_code as lang %}
-
-                {% language language_code %}
-                    <a href="{% pageurl page.localized %}" rel="alternate" hreflang="{{ language_code }}">
-                        {{ lang.code|upper }}
-                    </a>
-                {% endlanguage %}
-            {% endfor %}
         </nav>
     </div>
 </header>
-<div class="modal-overlay">
+<div class="modal-nav-overlay">
     <nav class="modal-nav">
         <ul class="modal-menu">
             <li>
@@ -81,14 +83,23 @@
             <li>
                 <div class="lang-select">
                     <p>UA</p>
-                    <svg class="icon" width="8" height="8">
-                        <use href="/media/icons.svg#dropdown"></use>
-                    </svg>
                 </div>
                 <svg class="icon" width="24" height="24">
                     <use href="/media/icons.svg#lang-select"></use>
                 </svg>
             </li>
         </ul>
+        <div class="modal-lang-select">
+            {% for language_code, language_name in LANGUAGES %}
+                {% get_language_info for language_code as lang %}
+
+                {% language language_code %}
+                    <a href="{% pageurl page.localized %}" rel="alternate" hreflang="{{ language_code }}">
+                        {{ lang.code|upper }}
+                    </a>
+                {% endlanguage %}
+            {% endfor %}
+        </div>
     </nav>
 </div>
+

@@ -4,22 +4,19 @@
 
 <!-- Example -->
 {% load wagtailimages_tags %}
-<div>
+<div class="images3p2">
     <div class="first-row">
         {% image value.images.0 width-300 as img1 %}
-        <img src="{{ img1.url }}">
-
+        <img src="media/images/87628ce2e74007577e320044b562c800.jpg">
         {% image value.images.1 width-300 as img2 %}
-        <img src="{{ img2.url }}">
-
+        <img src="media/images/87628ce2e74007577e320044b562c800.jpg">
         {% image value.images.2 width-300 as img3 %}
-        <img src="{{ img3.url }}">
+        <img src="media/images/87628ce2e74007577e320044b562c800.jpg">
     </div>
     <div class="second-row">
         {% image value.images.3 fill-350x300 as img4 %}
-        <img src="{{ img4.url }}">
-
+        <img src="media/images/87628ce2e74007577e320044b562c800.jpg">
         {% image value.images.4 fill-550x300 as img5 %}
-        <img src="{{ img5.url }}">
+        <img src="media/images/87628ce2e74007577e320044b562c800.jpg">
     </div>
 </div>

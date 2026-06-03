@@ -14,19 +14,14 @@
 <link rel="stylesheet" href="{% static 'main/components/banner.css' %}">
 <link rel="stylesheet" href="{% static 'main/components/promo_section.css' %}">
 <link rel="stylesheet" href="{% static 'main/components/partners.css' %}">
+
+<link rel="stylesheet" href="{% static 'main/blocks/images2p1_block.css' %}">
+<link rel="stylesheet" href="{% static 'main/blocks/images3p2_block.css' %}">
+<link rel="stylesheet" href="{% static 'main/blocks/imagetext_block.css' %}">
 {% endblock %}
 
 {% block content %}
-    <!-- Language choose -->
-    {% for language_code, language_name in LANGUAGES %}
-        {% get_language_info for language_code as lang %}
-
-        {% language language_code %}
-            <a href="{% pageurl page.localized %}" rel="alternate" hreflang="{{ language_code }}">
-                {{ lang.code|upper }}
-            </a>
-        {% endlanguage %}
-    {% endfor %}
+    {% header %}
 
     <!-- {% include "main/components/hero.html" %} -->
 
@@ -59,6 +54,8 @@
 
     {% include "main/components/promo_section.html" %}
     <!-- "page." didn't work for me -->
+
+    {% include "main/blocks/imagetext_block.html" %}
 
     {% contact_form %}
 
