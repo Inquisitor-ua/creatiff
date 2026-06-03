@@ -1,0 +1,392 @@
+# English translation for creatiff.
+# Copyright (C) 2026 Creatiff
+# This file is distributed under the same license as the creatiff package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: creatiff 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-03 00:00+0000\n"
+"PO-Revision-Date: 2026-06-03 00:00+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: main/models.py
+msgid "Name"
+msgstr "Name"
+
+#: main/models.py
+msgid "Email"
+msgstr "Email"
+
+#: main/models.py
+msgid "Phone number"
+msgstr "Phone number"
+
+#: main/models.py
+msgid "Message text"
+msgstr "Message text"
+
+#: main/models.py
+msgid "Date and time of the request"
+msgstr "Date and time of the request"
+
+#: main/models.py
+msgid "Contact form"
+msgstr "Contact form"
+
+#: main/models.py
+msgid "Contact forms"
+msgstr "Contact forms"
+
+#: main/models.py
+msgid "Details button"
+msgstr "Details button"
+
+#: main/models.py
+msgid "Details"
+msgstr "Details"
+
+#: main/models.py
+msgid "Hero settings (First banner)"
+msgstr "Hero banner settings"
+
+#: main/models.py
+msgid "Content pages tiles settings"
+msgstr "Content page tile settings"
+
+#: main/models.py
+msgid "List of partners"
+msgstr "List of partners"
+
+#: main/models.py
+msgid "Banner settings"
+msgstr "Banner settings"
+
+#: main/models.py
+msgid "Promo-section"
+msgstr "Promo section"
+
+#: main/models.py
+msgid "Preview card image"
+msgstr "Preview card image"
+
+#: main/models.py
+msgid "Preview card title"
+msgstr "Preview card title"
+
+#: main/models.py
+msgid "Preview card description"
+msgstr "Preview card description"
+
+#: main/models.py
+msgid "Text editor"
+msgstr "Text editor"
+
+#: main/models.py
+msgid "Preview card information"
+msgstr "Preview card information"
+
+#: main/models.py
+msgid "This summary card will appear on the home page"
+msgstr "This summary card will appear on the homepage"
+
+#: main/models.py
+msgid "Title/name of the company"
+msgstr "Company name/title"
+
+#: main/models.py
+msgid "Subtitle of the company"
+msgstr "Company subtitle"
+
+#: main/models.py
+msgid "Phone"
+msgstr "Phone"
+
+#: main/models.py
+msgid "Facebook URL"
+msgstr "Facebook URL"
+
+#: main/models.py
+msgid "Instagram URL"
+msgstr "Instagram URL"
+
+#: main/models.py
+msgid "Website logo"
+msgstr "Website logo"
+
+#: main/models.py
+msgid "Website favicon"
+msgstr "Website favicon"
+
+#: main/models.py
+msgid "Overall information"
+msgstr "General information"
+
+#: main/models.py
+msgid "Website important images"
+msgstr "Key website images"
+
+#: main/models.py
+msgid "Contacts"
+msgstr "Contacts"
+
+#: main/models.py
+msgid "Social media"
+msgstr "Social media"
+
+#: main/models.py
+msgid "Company information"
+msgstr "Company information"
+
+#: main/blocks.py
+msgid "Statistics number"
+msgstr "Stat number"
+
+#: main/blocks.py
+msgid "Statistics text"
+msgstr "Stat text"
+
+#: main/blocks.py
+msgid "First row of the caption"
+msgstr "First row of caption"
+
+#: main/blocks.py
+msgid "Second row of the caption"
+msgstr "Second row of caption"
+
+#: main/blocks.py
+msgid "Big text paragraph"
+msgstr "Large text paragraph"
+
+#: main/blocks.py
+msgid "Small text paragraph"
+msgstr "Small text paragraph"
+
+#: main/blocks.py
+msgid "Button text"
+msgstr "Button text"
+
+#: main/blocks.py
+msgid "Statistics"
+msgstr "Statistics"
+
+#: main/blocks.py
+msgid "Main hero image"
+msgstr "Main hero image"
+
+#: main/blocks.py
+msgid "Hero"
+msgstr "Hero banner"
+
+#: main/blocks.py
+msgid "Partners logo"
+msgstr "Partner logo"
+
+#: main/blocks.py
+msgid "Partners name"
+msgstr "Partner name"
+
+#: main/blocks.py
+msgid "Add partner"
+msgstr "Add partner"
+
+#: main/blocks.py
+msgid "Partners"
+msgstr "Partners"
+
+#: main/blocks.py
+msgid "Banner title"
+msgstr "Banner title"
+
+#: main/blocks.py
+msgid "Banner button text"
+msgstr "Banner button text"
+
+#: main/blocks.py
+msgid "Banner"
+msgstr "Banner"
+
+#: main/blocks.py
+msgid "Title of point"
+msgstr "Item title"
+
+#: main/blocks.py
+msgid "Text of point"
+msgstr "Item text"
+
+#: main/blocks.py
+msgid "Benefits"
+msgstr "Benefits"
+
+#: main/blocks.py
+msgid "Heading of a section"
+msgstr "Section heading"
+
+#: main/blocks.py
+msgid "Main description"
+msgstr "Main description"
+
+#: main/blocks.py
+msgid "List of benefits"
+msgstr "List of benefits"
+
+#: main/blocks.py
+msgid "Text before button"
+msgstr "Text before button"
+
+#: main/blocks.py
+msgid "Contact with us"
+msgstr "Contact us"
+
+#: main/blocks.py
+msgid "Image"
+msgstr "Image"
+
+#: main/blocks.py
+msgid "2 + 1 images"
+msgstr "2 + 1 images"
+
+#: main/blocks.py
+msgid "Add images"
+msgstr "Add images"
+
+#: main/blocks.py
+msgid "Gallery of images"
+msgstr "Image gallery"
+
+#: main/blocks.py
+msgid "3 + 2 images"
+msgstr "3 + 2 images"
+
+#: main/blocks.py
+msgid "Images on the left, text on the right"
+msgstr "Images on the left, text on the right"
+
+#: main/blocks.py
+msgid "Text on the left, images on the right"
+msgstr "Text on the left, images on the right"
+
+#: main/blocks.py
+msgid "Elements layout"
+msgstr "Layout settings"
+
+#: main/blocks.py
+msgid "Text"
+msgstr "Text"
+
+#: main/blocks.py
+msgid "Columns with images and text"
+msgstr "Columns with images and text"
+
+#: main/forms.py
+msgid "You name"
+msgstr "Your name"
+
+#: main/forms.py
+msgid "Input your name"
+msgstr "Enter your name"
+
+#: main/forms.py
+msgid "Your Email"
+msgstr "Your email"
+
+#: main/forms.py
+msgid "email@example.com"
+msgstr "email@example.com"
+
+#: main/forms.py
+msgid "Your phone"
+msgstr "Your phone number"
+
+#: main/forms.py
+msgid "+34 123 456 789"
+msgstr "+34 123 456 789"
+
+#: main/forms.py
+msgid "Your message"
+msgstr "Your message"
+
+#: main/forms.py
+msgid "Describe your question here"
+msgstr "Describe your question here"
+
+#: main/snippets.py
+msgid "Header settings"
+msgstr "Header settings"
+
+#: main/snippets.py
+msgid "Footer caption"
+msgstr "Footer caption"
+
+#: main/snippets.py
+msgid "Rights"
+msgstr "Copyrights"
+
+#: main/snippets.py
+msgid "Footer setting"
+msgstr "Footer settings"
+
+#: main/snippets.py
+msgid "Footer settings"
+msgstr "Footer settings"
+
+#: main/snippets.py
+msgid "Form title"
+msgstr "Form title"
+
+#: main/snippets.py
+msgid "Email for receiving forms"
+msgstr "Email for receiving form submissions"
+
+#: main/snippets.py
+msgid "Is phone required"
+msgstr "Phone number is required"
+
+#: main/snippets.py
+msgid "Label for field 'Name'"
+msgstr "Label for 'Name' field"
+
+#: main/snippets.py
+msgid "Placeholder for field 'Name'"
+msgstr "Placeholder for 'Name' field"
+
+#: main/snippets.py
+msgid "Label for field 'Email'"
+msgstr "Label for 'Email' field"
+
+#: main/snippets.py
+msgid "Placeholder for field 'Email'"
+msgstr "Placeholder for 'Email' field"
+
+#: main/snippets.py
+msgid "Label for field 'Phone'"
+msgstr "Label for 'Phone' field"
+
+#: main/snippets.py
+msgid "Placeholder for field 'Phone'"
+msgstr "Placeholder for 'Phone' field"
+
+#: main/snippets.py
+msgid "Label for field 'message'"
+msgstr "Label for 'Message' field"
+
+#: main/snippets.py
+msgid "Placeholder for field 'Message'"
+msgstr "Placeholder for 'Message' field"
+
+#: main/snippets.py
+msgid "Confirmation button text"
+msgstr "Confirmation button text"
+
+#: main/snippets.py
+msgid "Message for сonfirmation that the form was successfully submitted"
+msgstr "Confirmation message for successfully submitted forms"
+
+#: main/snippets.py
+msgid "Contact form settings"
+msgstr "Contact form settings"
