@@ -11,6 +11,9 @@
 <link rel="stylesheet" href="{% static 'main/components/header.css' %}">
 <link rel="stylesheet" href="{% static 'main/components/footer.css' %}">
 <link rel="stylesheet" href="{% static 'main/components/hero.css' %}">
+<link rel="stylesheet" href="{% static 'main/components/banner.css' %}">
+<link rel="stylesheet" href="{% static 'main/components/promo_section.css' %}">
+<link rel="stylesheet" href="{% static 'main/components/partners.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -52,11 +55,12 @@
 
     {{ page.partners }}
 
-    {{ page.banner }}
+    {% include "main/components/banner.html" %}
 
-    {{ page.promo }}
+    {% include "main/components/promo_section.html" %}
+    <!-- "page." didn't work for me -->
 
-    <!-- {% contact_form %} -->
+    {% contact_form %}
 
-    <!-- {% footer %} -->
+    {% footer %}
 {% endblock %}

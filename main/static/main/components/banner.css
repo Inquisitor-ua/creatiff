@@ -1,0 +1,41 @@
+.banner {
+    background: radial-gradient(387.73% 141.42% at 0% 0%, #3d3d3d 0%, #0f0f0f 42.19%);
+    padding: 48px 16px;
+    margin-left: auto;
+    margin-right: auto;
+
+    line-height: 125%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+.banner-text {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+.banner-button {
+    font-weight: 600;
+    color: #fff;
+    font-size: 16px;
+
+    border-radius: 64px;
+    border: none;
+    padding: 12px 32px;
+    width: fit-content;
+    background: #ff9300;
+}
+
+@media screen and (min-width: 1440px) {
+    .banner-text {
+        font-size: 40px;
+        margin-bottom: 32px;
+    }
+
+    .banner-button {
+        font-size: 20px;
+        padding: 15.5px 32px;
+    }
+}

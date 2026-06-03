@@ -1,0 +1,157 @@
+.promo {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.promo>.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 360px;
+}
+
+.promo img {
+    width: 328px;
+    height: 332px;
+    border-radius: 167px 167px 5px 5px;
+    box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.25);
+}
+
+.promo-text-wrapper h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 125%;
+    color: #15132a;
+
+    margin-bottom: 12px;
+}
+.promo-text-main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.promo-text-wrapper p {
+    font-size: 14px;
+    line-height: 150%;
+    color: rgba(21, 19, 42, 0.75);
+}
+
+.benefits {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.benefits>li {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.benefit-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.promo-svg {
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    background-color: #f1f9f0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.benefit-head>h3 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #15132a;
+}
+
+.benefit-head + p {
+    margin-left: calc(40px + 12px);
+}
+
+.promo-button {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 125%;
+    text-transform: uppercase;
+    color: #fff;
+
+    background: #ff9300;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-radius: 64px;
+    border: none;
+    width: 100%;
+}
+
+@media screen and (min-width: 1440px) {
+    .promo {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
+    .promo>.container {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 16px;
+        max-width: none;
+    }
+
+    .promo img {
+        width: 504px;
+        height: 712px;
+        border-radius: 256px 256px 8px 8px;
+        box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.25);
+    }
+    
+    .promo-text-wrapper {
+        width: 712px;
+    }
+    .promo-text-main {
+        max-width: 608px;
+        gap: 32px;
+    }
+
+    .promo-text-wrapper h2 {
+        font-size: 40px;
+        line-height: 125%;
+
+        margin-bottom: 32px;
+    }
+
+    .promo-text-wrapper p {
+        font-size: 20px;
+    }
+
+    .benefits,
+    .benefit-head {
+        gap: 16px;
+    }
+
+    .benefit-head>h3 {
+        font-size: 20px;
+    }
+    .benefit-head + p {
+        font-size: 16px;
+        margin-left: calc(40px + 16px);
+    }
+
+    .promo-button {
+        font-size: 20px;
+
+        padding-top: 15.5px;
+        padding-bottom: 15.5px;
+    }
+
+}
