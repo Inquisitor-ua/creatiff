@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
+from django.utils.translation import gettext as _
 from .forms import ContactForm
 from .models import ContactModel, HomePage
 from .snippets import ContactFormSettings

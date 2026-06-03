@@ -1,0 +1,381 @@
+# Ukrainian translation for creatiff.
+# Copyright (C) 2026 Creatiff
+# This file is distributed under the same license as the creatiff package.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: creatiff 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-03 00:00+0000\n"
+"PO-Revision-Date: 2026-06-03 00:00+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Ukrainian\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: main/blocks.py:25
+msgid "Statistics number"
+msgstr "Цифра статистики"
+
+#: main/blocks.py:26
+msgid "Statistics text"
+msgstr "Текст статистики"
+
+#: main/blocks.py:30
+msgid "First row of the caption"
+msgstr "Перший рядок підпису"
+
+#: main/blocks.py:31
+msgid "Second row of the caption"
+msgstr "Другий рядок підпису"
+
+#: main/blocks.py:32
+msgid "Big text paragraph"
+msgstr "Великий текстовий абзац"
+
+#: main/blocks.py:33
+msgid "Small text paragraph"
+msgstr "Малий текстовий абзац"
+
+#: main/blocks.py:34 main/blocks.py:84
+msgid "Button text"
+msgstr "Текст кнопки"
+
+#: main/blocks.py:35
+msgid "Statistics"
+msgstr "Статистика"
+
+#: main/blocks.py:36
+msgid "Main hero image"
+msgstr "Основне зображення головного банера"
+
+#: main/blocks.py:40
+msgid "Hero"
+msgstr "Головний банер (Hero)"
+
+#: main/blocks.py:44
+msgid "Partners logo"
+msgstr "Логотип партнера"
+
+#: main/blocks.py:45
+msgid "Partners name"
+msgstr "Назва партнера"
+
+#: main/blocks.py:51
+msgid "Add partner"
+msgstr "Додати партнера"
+
+#: main/blocks.py:56
+msgid "Partners"
+msgstr "Партнери"
+
+#: main/blocks.py:60
+msgid "Banner title"
+msgstr "Заголовок банера"
+
+#: main/blocks.py:61
+msgid "Banner button text"
+msgstr "Текст кнопки банера"
+
+#: main/blocks.py:65
+msgid "Banner"
+msgstr "Банер"
+
+#: main/blocks.py:69
+msgid "Title of point"
+msgstr "Назва пункту"
+
+#: main/blocks.py:70
+msgid "Text of point"
+msgstr "Текст пункту"
+
+#: main/blocks.py:73
+msgid "Benefits"
+msgstr "Переваги"
+
+#: main/blocks.py:78
+msgid "Heading of a section"
+msgstr "Заголовок розділу"
+
+#: main/blocks.py:79
+msgid "Main description"
+msgstr "Основний опис"
+
+#: main/blocks.py:81
+msgid "List of benefits"
+msgstr "Список переваг"
+
+#: main/blocks.py:83
+msgid "Text before button"
+msgstr "Текст перед кнопкою"
+
+#: main/blocks.py:84
+msgid "Contact with us"
+msgstr "Зв'яжіться з нами"
+
+#: main/blocks.py:86
+msgid "Image"
+msgstr "Зображення"
+
+#: main/blocks.py:91 main/models.py:75
+msgid "Promo-section"
+msgstr "Промо-розділ"
+
+#: main/blocks.py:97 main/blocks.py:111 main/blocks.py:124 main/blocks.py:147
+msgid "Add images"
+msgstr "Додати зображення"
+
+#: main/blocks.py:105
+msgid "2 + 1 images"
+msgstr "2 + 1 зображення"
+
+#: main/blocks.py:118
+msgid "Gallery of images"
+msgstr "Галерея зображень"
+
+#: main/blocks.py:132
+msgid "3 + 2 images"
+msgstr "3 + 2 зображення"
+
+#: main/blocks.py:138
+msgid "Images on the left, text on the right"
+msgstr "Зображення зліва, текст справа"
+
+#: main/blocks.py:139
+msgid "Text on the left, images on the right"
+msgstr "Текст зліва, зображення справа"
+
+#: main/blocks.py:142
+msgid "Elements layout"
+msgstr "Розташування елементів"
+
+#: main/blocks.py:151
+msgid "Text"
+msgstr "Текст"
+
+#: main/blocks.py:156
+msgid "Columns with images and text"
+msgstr "Колонки з зображеннями та текстом"
+
+#: main/forms.py:14
+msgid "Your name"
+msgstr "Ваше ім'я"
+
+#: main/forms.py:17
+msgid "Input your name"
+msgstr "Введіть своє ім'я"
+
+#: main/forms.py:20
+msgid "Your Email"
+msgstr "Ваш Email"
+
+#: main/forms.py:23
+msgid "email@example.com"
+msgstr "email@example.com"
+
+#: main/forms.py:27
+msgid "Your phone"
+msgstr "Ваш телефон"
+
+#: main/forms.py:34
+msgid "Your message"
+msgstr "Ваше повідомлення"
+
+#: main/forms.py:37
+msgid "Describe your question here"
+msgstr "Опишіть своє запитання тут"
+
+#: main/models.py:17
+msgid "Name"
+msgstr "Ім'я"
+
+#: main/models.py:18 main/models.py:127
+msgid "Email"
+msgstr "Електронна пошта"
+
+#: main/models.py:19
+msgid "Phone number"
+msgstr "Номер телефону"
+
+#: main/models.py:20
+msgid "Message text"
+msgstr "Текст повідомлення"
+
+#: main/models.py:21
+msgid "Date and time of the request"
+msgstr "Дата та час запиту"
+
+#: main/models.py:27
+msgid "Contact form"
+msgstr "Контактна форма"
+
+#: main/models.py:28
+msgid "Contact forms"
+msgstr "Контактні форми"
+
+#: main/models.py:63
+msgid "Hero settings (First banner)"
+msgstr "Налаштування головного банера (Hero)"
+
+#: main/models.py:66
+msgid "Content pages tiles settings"
+msgstr "Налаштування плиток для сторінок контенту"
+
+#: main/models.py:69
+msgid "List of partners"
+msgstr "Список партнерів"
+
+#: main/models.py:72
+msgid "Banner settings"
+msgstr "Налаштування банера"
+
+#: main/models.py:92
+msgid "Preview card image"
+msgstr "Зображення картки попереднього перегляду"
+
+#: main/models.py:93
+msgid "Preview card title"
+msgstr "Заголовок картки попереднього перегляду"
+
+#: main/models.py:94
+msgid "Preview card description"
+msgstr "Опис картки попереднього перегляду"
+
+#: main/models.py:98
+msgid "Text editor"
+msgstr "Текстовий редактор"
+
+#: main/models.py:110
+msgid "Preview card information"
+msgstr "Інформація картки попереднього перегляду"
+
+#: main/models.py:110
+msgid "This summary card will appear on the home page"
+msgstr "Ця картка анонсу відображатиметься на головній сторінці"
+
+#: main/models.py:122
+msgid "Title/name of the company"
+msgstr "Назва компанії"
+
+#: main/models.py:123
+msgid "Subtitle of the company"
+msgstr "Підзаголовок компанії"
+
+#: main/models.py:126
+msgid "Phone"
+msgstr "Телефон"
+
+#: main/models.py:130
+msgid "Facebook URL"
+msgstr "URL Facebook"
+
+#: main/models.py:131
+msgid "Instagram URL"
+msgstr "URL Instagram"
+
+#: main/models.py:134
+msgid "Website logo"
+msgstr "Логотип вебсайту"
+
+#: main/models.py:135
+msgid "Website favicon"
+msgstr "Favicon вебсайту"
+
+#: main/models.py:164
+msgid "Overall information"
+msgstr "Загальна інформація"
+
+#: main/models.py:165
+msgid "Website important images"
+msgstr "Важливі зображення вебсайту"
+
+#: main/models.py:166
+msgid "Contacts"
+msgstr "Контакти"
+
+#: main/models.py:167
+msgid "Social media"
+msgstr "Соціальні мережі"
+
+#: main/models.py:171
+msgid "Company information"
+msgstr "Інформація про компанію"
+
+#: main/snippets.py:18
+msgid "Header settings"
+msgstr "Налаштування шапки сайту"
+
+#: main/snippets.py:22
+msgid "Footer caption"
+msgstr "Підпис у підвалі сайту"
+
+#: main/snippets.py:23
+msgid "Rights"
+msgstr "Права"
+
+#: main/snippets.py:31
+msgid "Footer setting"
+msgstr "Налаштування підвалу сайту"
+
+#: main/snippets.py:34
+msgid "Footer settings"
+msgstr "Налаштування підвалу сайту"
+
+#: main/snippets.py:38
+msgid "Form title"
+msgstr "Заголовок форми"
+
+#: main/snippets.py:39
+msgid "Email for receiving forms"
+msgstr "Email для отримання даних із форм"
+
+#: main/snippets.py:41
+msgid "Is phone required"
+msgstr "Телефон є обов'язковим"
+
+#: main/snippets.py:43
+msgid "Label for field 'Name'"
+msgstr "Мітка для поля 'Ім'я'"
+
+#: main/snippets.py:44
+msgid "Placeholder for field 'Name'"
+msgstr "Підказка для поля 'Ім'я'"
+
+#: main/snippets.py:45
+msgid "Label for field 'Email'"
+msgstr "Мітка для поля 'Email'"
+
+#: main/snippets.py:46
+msgid "Placeholder for field 'Email'"
+msgstr "Підказка для поля 'Email'"
+
+#: main/snippets.py:47
+msgid "Label for field 'Phone'"
+msgstr "Мітка для поля 'Телефон'"
+
+#: main/snippets.py:48
+msgid "Placeholder for field 'Phone'"
+msgstr "Підказка для поля 'Телефон'"
+
+#: main/snippets.py:49
+msgid "Label for field 'message'"
+msgstr "Мітка для поля 'Повідомлення'"
+
+#: main/snippets.py:50
+msgid "Placeholder for field 'Message'"
+msgstr "Підказка для поля 'Повідомлення'"
+
+#: main/snippets.py:51
+msgid "Confirmation button text"
+msgstr "Текст кнопки підтвердження"
+
+#: main/snippets.py:52
+msgid "Message for сonfirmation that the form was successfully submitted"
+msgstr "Повідомлення про успішне відправлення форми"
+
+#: main/snippets.py:71 main/snippets.py:74
+msgid "Contact form settings"
+msgstr "Налаштування контактної форми"

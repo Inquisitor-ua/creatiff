@@ -1,3 +1,4 @@
+from django.utils.translation import gettext_lazy as _
 from wagtail.blocks import (
     CharBlock,
     ChoiceBlock,
@@ -21,79 +22,79 @@ from wagtail.snippets.blocks import SnippetChooserBlock
 #         label = "Header"
 
 class HeroStatsBlock(StructBlock):
-    stats_number = CharBlock(max_length = 8, label = "Statistics number")
-    stats_text = CharBlock(max_length = 64, label = "Statistics text")
+    stats_number = CharBlock(max_length = 8, label = _("Statistics number"))
+    stats_text = CharBlock(max_length = 64, label = _("Statistics text"))
 
 
 class HeroBlock(StructBlock):
-    caption_first_row = CharBlock(max_length = 128, label="First row of the caption")
-    caption_second_row = CharBlock(max_length = 128, label="Second row of the caption")
-    big_paragraph = CharBlock(max_length = 1024, label = 'Big text paragraph')
-    small_paragraph = CharBlock(max_length = 1024, label = 'Small text paragraph')
-    button = CharBlock(max_length = 64, label = "Button text")
-    statistics = ListBlock(HeroStatsBlock(), label = "Statistics")
-    image = ImageChooserBlock(required = False, label = "Main hero image")
+    caption_first_row = CharBlock(max_length = 128, label=_("First row of the caption"))
+    caption_second_row = CharBlock(max_length = 128, label=_("Second row of the caption"))
+    big_paragraph = CharBlock(max_length = 1024, label = _("Big text paragraph"))
+    small_paragraph = CharBlock(max_length = 1024, label = _("Small text paragraph"))
+    button = CharBlock(max_length = 64, label = _("Button text"))
+    statistics = ListBlock(HeroStatsBlock(), label = _("Statistics"))
+    image = ImageChooserBlock(required = False, label = _("Main hero image"))
 
     class Meta:
         template = "main/components/hero.html"
-        label = "Hero"
+        label = _("Hero")
 
 
 class PartenrInfoBlock(StructBlock):
-    partner_logo = ImageChooserBlock(required=True, label = "Partners logo")
-    partner_name = CharBlock(max_length = 256, label = 'Partners name')
+    partner_logo = ImageChooserBlock(required=True, label = _("Partners logo"))
+    partner_name = CharBlock(max_length = 256, label = _("Partners name"))
 
 
 class PartnersBlock(StructBlock):
     partners = ListBlock(
         PartenrInfoBlock(required = False),
-        label = 'Add partner',
+        label = _("Add partner"),
     )
 
     class Meta:
         template = 'main/components/partners.html'
-        label = 'Partners'
+        label = _("Partners")
 
 
 class BannerBlock(StructBlock):
-    heading = CharBlock(max_length = 256, label = 'Banner title')
-    button = CharBlock(max_length = 128, label = 'Banner button text')
+    heading = CharBlock(max_length = 256, label = _("Banner title"))
+    button = CharBlock(max_length = 128, label = _("Banner button text"))
 
     class Meta:
         template = 'main/components/banner.html'
-        label = 'Banner'
+        label = _("Banner")
 
 
 class PointsBlock(StructBlock):
-    title = CharBlock(max_length = 128, label = 'Title of point')
-    text = CharBlock(max_length = 256, label = 'Text of point')
+    title = CharBlock(max_length = 128, label = _("Title of point"))
+    text = CharBlock(max_length = 256, label = _("Text of point"))
 
     class Meta:
-        label = 'Benefits'
+        label = _("Benefits")
         icon = 'pick'
     
 
 class PromosectionBlock(StructBlock):
-    title = CharBlock(max_length=250, label="Heading of a section")
-    description = TextBlock(label="Main description")
+    title = CharBlock(max_length=250, label=_("Heading of a section"))
+    description = TextBlock(label=_("Main description"))
 
-    benefits = ListBlock(PointsBlock(), label="List of benefits")
+    benefits = ListBlock(PointsBlock(), label=_("List of benefits"))
 
-    cta_text = CharBlock(max_length=250, required=False, label="Text before button")
-    button_text = CharBlock(max_length=50, default="Contact with us", label="Button text")
+    cta_text = CharBlock(max_length=250, required=False, label=_("Text before button"))
+    button_text = CharBlock(max_length=50, default=_("Contact with us"), label=_("Button text"))
     
-    image = ImageChooserBlock(label="Image")
+    image = ImageChooserBlock(label=_("Image"))
 
     class Meta:
         template = "main/components/promo_section.html"
         icon = "image-text"
-        label = "Promo-section"
+        label = _("Promo-section")
 
 
 class Images2p1Block(StructBlock):
     images = ListBlock(
         ImageChooserBlock(required = True),
-        label = "Add images",
+        label = _("Add images"),
         min_num = 3,
         max_num = 3,
     )
@@ -101,26 +102,26 @@ class Images2p1Block(StructBlock):
     class Meta:
         icon = 'image'
         template = 'main/blocks/images2p1_block.html'
-        label = "2 + 1 images"
+        label = _("2 + 1 images")
 
 
 class GalleryBlock(StructBlock):
     images = ListBlock(
         ImageChooserBlock(required = True),
-        label = "Add images",
+        label = _("Add images"),
         min_num = 1,
     )
 
     class Meta:
         icon = "image"
         template = 'main/blocks/gallery.html'
-        label = "Gallery of images"
+        label = _("Gallery of images")
 
 
 class Images3p2Block(StructBlock):
     images = ListBlock(
         ImageChooserBlock(required = True),
-        label = "Add images",
+        label = _("Add images"),
         min_num = 5,
         max_num = 5,
     )
@@ -128,28 +129,28 @@ class Images3p2Block(StructBlock):
     class Meta:
         icon = 'image'
         template = 'main/blocks/images3p2_block.html'
-        label = "3 + 2 images"
+        label = _("3 + 2 images")
 
 
 class ImagetextBlock(StructBlock):
     layout = ChoiceBlock(
         choices=[
-            ('img-left', 'Images on the left, text on the right'),
-            ('img-right', 'Text on the left, images on the right'),
+            ('img-left', _("Images on the left, text on the right")),
+            ('img-right', _("Text on the left, images on the right")),
         ],
         default='img-left',
-        label="Elements layout"
+        label=_("Elements layout")
     )
 
     images = ListBlock(
         ImageChooserBlock(required = True),
-        label = "Add images",
+        label = _("Add images"),
         min_num = 1,
     )
 
-    text = RichTextBlock(label = 'Text')
+    text = RichTextBlock(label = _("Text"))
 
     class Meta:
         icon = "list-ul"
         template = "main/blocks/imagetext_block.html"
-        label = "Columns with images and text"
+        label = _("Columns with images and text")

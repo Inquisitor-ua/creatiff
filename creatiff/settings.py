@@ -131,9 +131,13 @@ USE_L10N = True
 
 USE_TZ = True
 
+LOCALE_PATHS = [
+    BASE_DIR / 'main' / 'locale',
+]
+
 WAGTAIL_CONTENT_LANGUAGES = LANGUAGES = [
     ('en', "English"),
-    ('ru', "Russian"),
+    ('uk', "Ukrainian"),
     ('es', "Spanish"),
 ]
 

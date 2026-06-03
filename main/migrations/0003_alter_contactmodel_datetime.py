@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='contactmodel',
             name='datetime',
-            field=models.DateTimeField(auto_now_add=True, verbose_name='Дата та час звернення'),
+            field=models.DateTimeField(auto_now_add=True, verbose_name='Date and time of question'),
         ),
     ]
