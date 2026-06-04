@@ -1,0 +1,94 @@
+<!-- Gallery of images  -->
+
+
+<!-- example modal -->
+<!-- <div class="article-container">
+    <div class="swiper">
+        <div class="swiper-header">
+            <h3>Lorem Ipsum</h3>
+            <div class="swiper-button-wrapper">
+                <div class="swiper-button-prev swiper-button">
+                    <svg class="icon">
+                        <use href="/media/icons.svg#arrow"></use>
+                    </svg>
+                </div>
+                <div class="swiper-button-next swiper-button">
+                    <svg class="icon">
+                        <use href="/media/icons.svg#arrow"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-divider"></div>
+    
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="media/images/87628ce2e74007577e320044b562c800.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="media/images/87628ce2e74007577e320044b562c800.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="media/images/87628ce2e74007577e320044b562c800.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="media/images/87628ce2e74007577e320044b562c800.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="media/images/87628ce2e74007577e320044b562c800.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="media/images/87628ce2e74007577e320044b562c800.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="media/images/87628ce2e74007577e320044b562c800.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="media/images/87628ce2e74007577e320044b562c800.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="media/images/87628ce2e74007577e320044b562c800.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="media/images/87628ce2e74007577e320044b562c800.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="media/images/87628ce2e74007577e320044b562c800.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="media/images/87628ce2e74007577e320044b562c800.jpg">
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- title to be added -->
+<div class="swiper">
+    <div class="swiper-header">
+        <h3>Title/h3>
+        <div class="swiper-button-wrapper">
+            <div class="swiper-button-prev swiper-button">
+                <svg class="icon">
+                    <use href="/media/icons.svg#arrow"></use>
+                </svg>
+            </div>
+            <div class="swiper-button-next swiper-button">
+                <svg class="icon">
+                    <use href="/media/icons.svg#arrow"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="swiper-divider"></div>
+
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            {% for img in value.images %}
+                {% image img width-200 as rendered_image %}
+                <img src="{{ rendered_image.url }}">
+            {% endfor %}
+        </div>
+    </div>
+</div>

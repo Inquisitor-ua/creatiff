@@ -1,19 +1,20 @@
 
 {% load wagtailimages_tags %}
 
-<div class="media-grid-section {{ value.layout }}">
-
-    <div class="media-grid-column">
-        {% for img in value.images %}
-            {% image img fill-600x400 as rendered_image %}
-            <img src="{{ rendered_image.url }}">
-        {% endfor %}
-    </div>
-
-    <div class="media-grid-column column-text">
-        <div class="rich-text-content">
-            {{ value.text }}
+<div class="article-container">
+    <div class="imagetext {{ value.layout }}">
+        <div class="imagetext-column">
+            {% for img in value.images %}
+                {% image img fill-600x400 as rendered_image %}
+                <img src="{{ rendered_image.url }}">
+            {% endfor %}
+            <img src="media/images/87628ce2e74007577e320044b562c800.jpg">
+        </div>
+    
+        <div class="imagetext-column">
+            <div class="imagetext-text">
+                {{ value.text }}
+            </div>
         </div>
     </div>
-
 </div>

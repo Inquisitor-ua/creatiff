@@ -18,6 +18,9 @@
 <link rel="stylesheet" href="{% static 'main/blocks/images2p1_block.css' %}">
 <link rel="stylesheet" href="{% static 'main/blocks/images3p2_block.css' %}">
 <link rel="stylesheet" href="{% static 'main/blocks/imagetext_block.css' %}">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="{% static 'main/blocks/gallery_block.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -55,7 +58,7 @@
     {% include "main/components/promo_section.html" %}
     <!-- "page." didn't work for me -->
 
-    {% include "main/blocks/imagetext_block.html" %}
+    {% include "main/blocks/gallery_block.html" %}
 
     {% contact_form %}
 
