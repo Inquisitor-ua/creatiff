@@ -1,58 +1,34 @@
 
-{% load wagtailimages_tags %}
+{% load static wagtailcore_tags wagtailimages_tags my_components i18n %}
 <section class="promo">
     <div class="container">
-        <!-- {% image value.image width-400 as img %} -->
-        <img src="../../../../media/images/87628ce2e74007577e320044b562c800.jpg">
+        {% image value.image width-400 as img %}
+        <img src="{{ img.url }}">
         <div class="promo-text-wrapper">
-            <h2>¡Podemos reproducir todo lo que desee!</h2>
+            <h2>{{ value.title }}</h2>
             <div class="promo-text-main">
-                <p>Independientemente de si desea muebles personalizados para el hogar o la oficina, estamos listos para hacer realidad sus deseos. Envíenos una imagen de Pinterest y reproduciremos muebles únicos por encargo, teniendo en cuenta sus deseos y estilo.</p>
+                <p>{{ value.description }}</p>
                 <ul class="benefits">
-                    <li>
-                        <div class="benefit-head">
-                            <div class="promo-svg">
-                                <svg width="24" height="24" fill="#8EB547">
-                                    <use href="/media/icons.svg#tool"></use>
-                                </svg>
+                    {% for benefit in value.benefits %}
+                        <li>
+                            <div class="benefit-head">
+                                <div class="promo-svg">
+                                    <svg width="24" height="24" fill="#8EB547">
+                                        <use href="/media/icons.svg#tool"></use>
+                                    </svg>
+                                </div>
+                                <h3>{{ benefit.title }}</h3>
                             </div>
-                            <h3>Enfoque personalizado</h3>
-                        </div>
-                        <p>
-                            Escuchamos sus necesidades y consideramos todos sus deseos.
-                        </p>
-                    </li>
-                    <li>
-                        <div class="benefit-head">
-                            <div class="promo-svg">
-                                <svg width="24" height="24" fill="#8EB547">
-                                    <use href="/media/icons.svg#tool"></use>
-                                </svg>
-                            </div>
-                            <h3>Creatividad</h3>
-                        </div>
-                        <p>
-                            Combinamos y adaptamos conceptos para crear obras maestras.
-                        </p>
-                    </li>
-                    <li>
-                        <div class="benefit-head">
-                            <div class="promo-svg">
-                                <svg width="24" height="24" fill="#8EB547">
-                                    <use href="/media/icons.svg#tool"></use>
-                                </svg>
-                            </div>
-                            <h3>Responsabilidad</h3>
-                        </div>
-                        <p>
-                            Cumplimos con los plazos establecidos para nuestros trabajos.
-                        </p>
-                    </li>
+                            <p>
+                                {{ benefit.text }}
+                            </p>
+                        </li>
+                    {% endfor %}
                 </ul>
                 <p>
-                    Confíenos sus deseos y los convertiremos en realidad. ¡Consulte nuestro portafolio!
+                    {{ value.cta_text }}
                 </p>
-                <button class="promo-button">Contactar con nosotros</button>
+                <button class="promo-button">{{ value.button_text }}</button>
             </div>
         </div>
     </div>

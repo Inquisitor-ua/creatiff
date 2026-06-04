@@ -83,7 +83,7 @@ class PromosectionBlock(StructBlock):
     cta_text = CharBlock(max_length=250, required=False, label=_("Text before button"))
     button_text = CharBlock(max_length=50, default=_("Contact with us"), label=_("Button text"))
     
-    image = ImageChooserBlock(label=_("Image"))
+    image = ImageChooserBlock(label=_("Image"), required=False, blank=True, null=True)
 
     class Meta:
         template = "main/components/promo_section.html"

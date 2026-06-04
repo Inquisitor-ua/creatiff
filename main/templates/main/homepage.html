@@ -55,10 +55,9 @@
 
     {{ page.partners }}
 
-    {% include "main/components/banner.html" %}
+    {{ page.banner }}
 
-    {% include "main/components/promo_section.html" %}
-    <!-- "page." didn't work for me -->
+    {{ page.promo }}
 
     {% contact_form %}
 
