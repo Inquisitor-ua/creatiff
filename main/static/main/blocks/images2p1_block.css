@@ -1,0 +1,18 @@
+.images2p1 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.images2p1>.first-row {
+    display: flex;
+    gap: 16px;
+}
+
+.images2p1>.first-row img {
+    width: 400px;
+    height: 235px;
+}
+.images2p1>.second-row img {
+    width: 816px;
+    height: 504px;
+}

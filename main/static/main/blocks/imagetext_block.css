@@ -1,0 +1,16 @@
+.imagetext {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.imagetext .imagetext-column:first-child {
+    width: 295px;
+}
+.imagetext .imagetext-column:last-child {
+    max-width: 489px;
+}
+
+.imagetext-column img {
+    width: 100%;
+}
