@@ -88,10 +88,6 @@
     color: #FFFFFF;
     transition: all 0.3s ease;
 }
-.contact-form-button:hover{
-    cursor: pointer;
-    background-color: #bd6e00;
-}
 
 @media screen and (min-width: 1440px) {
     .ContactForm h2 {

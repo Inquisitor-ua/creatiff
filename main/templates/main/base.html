@@ -17,7 +17,16 @@
     {% endblock %}
 
     {% block scripts %}
-    <script src="{% static 'js/header-modal.js' %}"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "swiper": "https://cdn.jsdelivr.net/npm/swiper@11/swiper.mjs",
+            "swiper/": "https://cdn.jsdelivr.net/npm/swiper@11/"
+        }
+    }
+    </script>
+    <script type="module" src="{% static 'js/header-modal.js' %}"></script>
+    <script type="module" src="{% static 'js/swiper.js' %}"></script>
     {% endblock %}
 </body>
 </html>

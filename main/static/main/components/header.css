@@ -88,18 +88,28 @@ nav {
     flex-direction: row;
     align-items: center;
     gap: 8px;
-    
-    cursor: pointer;
 }
 .header-menu .lang-select {
     color: #fff;
 }
 
+.modal-lang-select {
+    display: flex;
+    gap: 12px;
+    align-items: end;
+}
+.modal-nav .modal-lang-select {
+    padding-right: 36px;
+}
+.modal-lang-select a {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+
 /* #region modal */
 
-.modal-overlay {
-    display: none;
-    /* Изменить позже! */
+.modal-nav-overlay {
     background-color: #FCFCFC;
     opacity: 0;
     position: fixed;
@@ -109,16 +119,17 @@ nav {
     width: 100vw;
     height: 100%;
     z-index: 100;
+    pointer-events: none;
 }
-.modal-overlay.is-open {
+.modal-nav-overlay.is-open {
     opacity: 1;
+    pointer-events: auto;
 }
 
 .modal-nav {
     display: flex;
     flex-direction: column;
     align-items: end;
-    width: 360px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 16px;
@@ -163,9 +174,55 @@ nav {
         flex-direction: row;
     }
 
-    .divider {
+    .header-menu li:last-child {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .header-divider {
         border: 1px solid #fff;
         width: 0px;
         height: 30px;
+    }
+
+    .modal-lang-overlay {
+        background-color: #FCFCFC;
+        display: none;
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        width: 100px;
+        z-index: -1;
+        pointer-events: none;
+
+        padding-top: 42px;
+        padding-right: 26px;
+        padding-bottom: 8px;
+        border-radius: 8px;
+    }
+    .modal-lang-overlay.is-open {
+        display: block;
+        pointer-events: auto;
+    }
+    .modal-lang-select {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: end;
+    }
+    .modal-lang-select a {
+        color: black;
+        font-size: 20px;
+        text-decoration: none;
+    }
+    .header-menu li:last-child.is-open {
+        z-index: 100;
+        border-radius: 8px 8px 0px 0px;
+        background-color: #fff;
+        fill: #4f6722;
+        pointer-events: auto;
+    }
+    .header-menu li:last-child.is-open .lang-select {
+        color: #4f6722;
     }
 }

@@ -6,11 +6,39 @@
     letter-spacing: 0%;
 }
 
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+html {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+body {
+    overflow-x: hidden;
+}
+
 .container {
     margin-left: auto;
     margin-right: auto;
     padding-left: 16px;
     padding-right: 16px;
+}
+.article-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 360px;
+}
+
+button {
+    transition: all 0.3s ease;
+}
+button:hover{
+    cursor: pointer;
+    background-color: #bd6e00;
 }
 
 .brand {
@@ -36,6 +64,12 @@
     .container {
         padding-left: 104px;
         padding-right: 104px;
+        width: 1440px;
+    }
+    .article-container {
+        padding-left: 312px;
+        padding-right: 312px;
+        max-width: none;
         width: 1440px;
     }
 }
