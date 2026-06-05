@@ -114,7 +114,7 @@ class GalleryBlock(StructBlock):
 
     class Meta:
         icon = "image"
-        template = 'main/blocks/gallery.html'
+        template = 'main/blocks/gallery_block.html'
         label = _("Gallery of images")
 
 
