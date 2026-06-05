@@ -14,7 +14,7 @@ class Command(BaseCommand):
     help = "Automatically creates a homepage, default site setup, and populates content pages."
 
     def get_or_create_seed_image(self, filename):
-        file_path = os.path.join("main", "media", "original_images", filename)
+        file_path = os.path.join("media", "original_images", filename)
         self.stdout.write(file_path)
         
         if not os.path.exists(file_path):
@@ -29,7 +29,7 @@ class Command(BaseCommand):
                     file=File(f, name=filename)
                 )
             
-        return image.id
+        return image
 
     def ensure_homepage_hero(self, homepage, image_id):
         hero_payload = [
@@ -37,14 +37,14 @@ class Command(BaseCommand):
                 "type": "hero",
                 "value": {
                     "caption_first_row": "STAR CREATIFF",
-                    "caption_second_row": "Hacemos de todo",
-                    "big_paragraph": "Nuestra empresa se ha creado para satisfacer cualquier capricho y deseo creativo de nuestros clientes. Fabricaremos en nuestra propia base e instalaremos todo lo que se le ocurra.",
-                    "small_paragraph": "Implementamos todas las soluciones técnicas.",
-                    "button": "Realizar idea",
+                    "caption_second_row": "We do everything",
+                    "big_paragraph": "Our company was founded to fulfill all of our clients’ creative ideas and wishes. We’ll manufacture and install everything you have in mind right here in our own facility.",
+                    "small_paragraph": "We implement all technical solutions.",
+                    "button": "Bring the Idea to Life",
                     "statistics": [
-                        {"stats_number": "9K", "stats_text": "Clientes Felices"},
-                        {"stats_number": "2K", "stats_text": "Muebles Vendidos"},
-                        {"stats_number": "28", "stats_text": "Estructuras construidas"},
+                        {"stats_number": "9K", "stats_text": "Happy Customers"},
+                        {"stats_number": "2K", "stats_text": "Furniture Sold"},
+                        {"stats_number": "28", "stats_text": "Completed Structures"},
                     ],
                     "image": image_id,
                 },
@@ -96,7 +96,11 @@ class Command(BaseCommand):
                         {"partner_logo": image_id, "partner_name": "Fraves 3"},
                         {"partner_logo": image_id, "partner_name": "Fraves 4"},
                         {"partner_logo": image_id, "partner_name": "Fraves 5"},
-                    ]
+                        {"partner_logo": image_id, "partner_name": "Fraves 6"},
+                        {"partner_logo": image_id, "partner_name": "Fraves 7"},
+                        {"partner_logo": image_id, "partner_name": "Fraves 8"},
+                    ],
+                    "title": "Our partners"
                 }
             }
         ]
@@ -114,7 +118,7 @@ class Command(BaseCommand):
     def ensure_homepage_promo(self, homepage, image_id):
         promo_payload = [
             {
-                "type": "promo",  # Соответствует названию в StreamField на HomePage
+                "type": "promo",
                 "value": {
                     "title": "We can create anything you want!",
                     "description": "Whether you're looking for custom furniture for your home or office, we're here to bring your vision to life. Send us a picture from Pinterest, and we'll create unique, custom-made furniture that perfectly matches your preferences and style.",
@@ -185,9 +189,9 @@ class Command(BaseCommand):
 
     def ensure_company_settings(self, site):
         try:
-            image_id = self.get_or_create_seed_image('default_logo.png')
+            image = self.get_or_create_seed_image('default_logo.png')
         except Exception as e:
-            image_id = None
+            image = None
             self.stdout.write(f"Error: {e}")
 
         defaults = {
@@ -197,8 +201,8 @@ class Command(BaseCommand):
             'email': "star.creatiff@gmail.com",
             'facebook': "https://facebook.com",
             'instagram': "https://instagram.com",
-            'logo': image_id,
-            'favicon': image_id,
+            'logo': image,
+            'favicon': image,
         }
 
         CompanySettings.objects.update_or_create(
@@ -238,7 +242,7 @@ class Command(BaseCommand):
         self.ensure_company_settings(site)
 
         try:
-            image_id = self.get_or_create_seed_image('photo_block_1.png')
+            image_id = self.get_or_create_seed_image('photo_block_1.png').id
             self.ensure_homepage_hero(homepage, image_id)
         except Exception as e:
             self.stdout.write(f"Error: {e}")
@@ -249,13 +253,13 @@ class Command(BaseCommand):
             self.stdout.write(f"Error: {e}")
 
         try:
-            image_id = self.get_or_create_seed_image('partner.png')
+            image_id = self.get_or_create_seed_image('partner.png').id
             self.ensure_homepage_partners(homepage, image_id)
         except Exception as e:
             self.stdout.write(f"Error: {e}")
 
         try:
-            image_id = self.get_or_create_seed_image('photo_block_1.png')
+            image_id = self.get_or_create_seed_image('photo_block_1.png').id
             self.ensure_homepage_promo(homepage, image_id)
         except Exception as e:
             self.stdout.write(f"Error: {e}")
