@@ -46,6 +46,7 @@ class PartenrInfoBlock(StructBlock):
 
 
 class PartnersBlock(StructBlock):
+    title = CharBlock(max_length = 256, label = _("Partners section title"))
     partners = ListBlock(
         PartenrInfoBlock(required = False),
         label = _("Add partner"),

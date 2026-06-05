@@ -41,6 +41,7 @@ class HomePage(Page):
 
     #Content pages tiles
     details_button = models.CharField(max_length=64, verbose_name="Details button", default="Details")
+    load_more_button = models.CharField(max_length=64, verbose_name="Button for loading more tiles (only on phones)", default="Load More")
 
     #Partners
     partners = StreamField([

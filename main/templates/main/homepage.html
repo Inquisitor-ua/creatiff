@@ -50,11 +50,11 @@
                 </li>
             {% endfor %}
             </ul>
-            <button type="button">Cargar más</button>
+            <button type="button">{{ page.load_more_button }}</button>
         </div>
     </section>
 
-    {% include "main/components/partners.html" %}
+    {{ page.partners }}
 
     {{ page.banner }}
 
