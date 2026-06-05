@@ -6,6 +6,7 @@ const modalNav = document.querySelector('.modal-nav-overlay');
 const langBtn = document.querySelector('.header-menu li:last-child')
 const modalLang = document.querySelector('.modal-lang-overlay');
 
+// TODO: Remove debug logs; add null checks before addEventListener
 console.log(langBtn);
 console.log(modalLang);
 

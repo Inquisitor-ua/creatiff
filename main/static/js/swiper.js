@@ -8,5 +8,6 @@ const swiper = new Swiper('.swiper', {
         prevEl: '.swiper-button-prev',
     },
     slidesPerView: 'auto',
+    // TODO: spaceBetween expects a number (8), not a string '8px'
     spaceBetween: '8px',
 });

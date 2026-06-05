@@ -2,9 +2,11 @@
 {% load wagtailimages_tags %}
 <section class="partners">
     <div class="container">
+        {# TODO: Hardcoded Spanish — move text to CMS / translations #}
         <p>nuestros socios:</p>
         <div class="partners-wrapper">
             {% for partner in value.partners %}
+                    {# TODO: `logo` is undefined here — src is empty. Use the partner's own image #}
                     <img src = "{{ logo.url }}">
             {% endfor %}
         </div>

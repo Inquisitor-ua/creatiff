@@ -5,6 +5,7 @@
 {% block title %}Home{% endblock %}
 
 {% block styles %}
+{# TODO: Load base.css before page-specific styles to avoid unintended overrides #}
 <link rel="stylesheet" href="{% static 'main/homepage.css' %}">
 <link rel="stylesheet" href="{% static 'main/base.css' %}">
 <link rel="stylesheet" href="{% static 'main/components/contact_form.css' %}">
@@ -50,6 +51,7 @@
                 </li>
             {% endfor %}
             </ul>
+            {# TODO: Hardcoded Spanish — move to CMS / translations #}
             <button type="button">Cargar más</button>
         </div>
     </section>

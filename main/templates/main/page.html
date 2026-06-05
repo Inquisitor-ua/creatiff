@@ -5,6 +5,7 @@
 {% block title %}{{ page.title }}{% endblock %}
 
 {% block styles %}
+{# TODO: Load base.css before page-specific styles to avoid unintended overrides #}
 <link rel="stylesheet" href="{% static 'main/homepage.css' %}">
 <link rel="stylesheet" href="{% static 'main/base.css' %}">
 <link rel="stylesheet" href="{% static 'main/components/contact_form.css' %}">

@@ -10,9 +10,11 @@
             </div>
         </div>
         <nav class="header-nav">
+            {# TODO: Serve icons.svg from static and reference it via the static tag, not a hardcoded /media path #}
             <svg class="icon hamburger-menu" width="32" height="32">
                 <use href="/media/icons.svg#hamburger-menu"></use>
             </svg>
+            {# TODO: These menu items are duplicated in .modal-nav-overlay below — extract into an include #}
             <ul class="header-menu">
                 <li>
                     <svg class="icon" width="24" height="24">

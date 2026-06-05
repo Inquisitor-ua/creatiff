@@ -2,6 +2,7 @@
 {% load wagtailimages_tags %}
 <section class="promo">
     <div class="container">
+        {# TODO: Render value.image via the image tag, not a relative ../ placeholder path that breaks on nested URLs #}
         <!-- {% image value.image width-400 as img %} -->
         <img src="../../../../media/images/87628ce2e74007577e320044b562c800.jpg">
         <div class="promo-text-wrapper">
