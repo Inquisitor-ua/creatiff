@@ -6,13 +6,13 @@
 <div class="images2p1">
     <div class="first-row">
         {% image value.images.0 width-500 as img1 %}
-        <img src="media/images/87628ce2e74007577e320044b562c800.jpg">
+        <img src="{{ img1.url }}" alt="{{ img1.alt }}">
 
         {% image value.images.1 width-500 as img2 %}
-        <img src="media/images/87628ce2e74007577e320044b562c800.jpg">
+        <img src="{{ img2.url }}" alt="{{ img2.alt }}">
     </div>
     <div class="second-row">
         {% image value.images.2 width-1004 as img3 %}
-        <img src="media/images/87628ce2e74007577e320044b562c800.jpg">
+        <img src="{{ img3.url }}" alt="{{ img3.alt }}">
     </div>
 </div>

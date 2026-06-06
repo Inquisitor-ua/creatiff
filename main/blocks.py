@@ -92,6 +92,7 @@ class PromosectionBlock(StructBlock):
         label = _("Promo-section")
 
 
+# Blocks for content pages
 class Images2p1Block(StructBlock):
     images = ListBlock(
         ImageChooserBlock(required = True),
@@ -104,6 +105,34 @@ class Images2p1Block(StructBlock):
         icon = 'image'
         template = 'main/blocks/images2p1_block.html'
         label = _("2 + 1 images")
+
+
+class Images3oversizedBlock(StructBlock):
+    images = ListBlock(
+        ImageChooserBlock(required = True),
+        label = _("Add images"),
+        min_num = 3,
+        max_num = 3,
+    )
+
+    class Meta:
+        icon = 'image'
+        template = 'main/blocks/images3oversized_block.html'
+        label = _("Row with 3 images")
+
+
+class Images2Block(StructBlock):
+    images = ListBlock(
+        ImageChooserBlock(required = True),
+        label = _("Add images"),
+        min_num = 2,
+        max_num = 2,
+    )
+
+    class Meta:
+        icon = 'image'
+        template = 'main/blocks/images2_block.html'
+        label = _("Row with 2 images")
 
 
 class GalleryBlock(StructBlock):
