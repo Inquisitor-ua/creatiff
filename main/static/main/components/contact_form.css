@@ -1,16 +1,16 @@
-.ContactForm{
+.contact-form{
     background-color: #353E23;
     padding-top: 48px;
     padding-bottom: 48px;
     color: #FFFFFF
 }
 
-.ContactForm>.container {
+.contact-form>.container {
     display: flex;
     flex-direction: column;
 }
 
-.ContactForm h2{
+.contact-form h2{
     text-align: center;
     font-size: 24px;
     font-weight: 700;
@@ -18,7 +18,7 @@
     margin-bottom: 24px;
 }
 
-.ContactForm form{
+.contact-form form{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -90,7 +90,7 @@
 }
 
 @media screen and (min-width: 1440px) {
-    .ContactForm h2 {
+    .contact-form h2 {
         font-size: 40px;
         margin-bottom: 32px;
     }
