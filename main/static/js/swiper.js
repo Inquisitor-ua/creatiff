@@ -8,5 +8,5 @@ const swiper = new Swiper('.swiper', {
         prevEl: '.swiper-button-prev',
     },
     slidesPerView: 'auto',
-    spaceBetween: '8px',
+    spaceBetween: '8',
 });
