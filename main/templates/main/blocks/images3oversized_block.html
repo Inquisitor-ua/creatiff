@@ -1,9 +1,10 @@
 {% load wagtailimages_tags %}
 
 <div class="images3oversized">
-    <img src="media/images/87628ce2e74007577e320044b562c800.jpg" alt="">
-    <img src="media/images/87628ce2e74007577e320044b562c800.jpg" alt="">
-    <img src="media/images/87628ce2e74007577e320044b562c800.jpg" alt="">
+    {% for img in value.images %}
+        {% image img original as rendered_image %}
+        <img src="{{ rendered_image.url }}" alt="{{ rendered_image.alt }}">
+    {% endfor %}
 </div>
 
 <!-- NOT to be included in .article-container -->

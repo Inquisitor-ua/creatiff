@@ -5,7 +5,6 @@ from wagtail.models import Page, Site, Locale
 from wagtail.images.models import Image 
 from main.models import CompanySettings, HomePage, ContentPage
 from main.snippets import ContactFormSettings
-from django.conf import settings
 
 import os
 
@@ -274,36 +273,55 @@ class Command(BaseCommand):
         pages_data = [
             {
                 'title': 'Construction, building and major refurbishments',
+                'preview_image': self.get_or_create_seed_image('photo_block_1.png'),
                 'preview_title': 'Construction, building and major refurbishments',
                 'preview_description': 'We manage construction projects from start to finish, taking every detail into account.',
-                'stream_data': [{"type": "rtfbody", "value": "<h1>Construction, building and major refurbishments</h1>"}]
+                'stream_data': [
+                    {"type": "rtfbody", "value": '<h2 data-block-key="2gnvd">Construction, building and major refurbishments</h2><p data-block-key="6uaf8"><b>Your dream home is our mission.</b></p><p data-block-key="cb3m">With Creatiff Star, construction becomes an art form. We don’t just build walls and a roof—we create a fully-fledged living space designed to meet your desires and needs.</p><p data-block-key="bg0v8"></p>'},
+                    {"type": "rtfbody", "value": '<h3 data-block-key="1fp6t">Why choose us? </h3><ul><li data-block-key="a51pl">A full range of services—from the groundbreaking to turnkey project completion.</li><li data-block-key="4fdst">A personalized approach—every project is unique, and we take all of the client’s wishes into account.</li><li data-block-key="drpca">Modern technologies — we use only proven materials and the latest construction solutions.</li><li data-block-key="9ne6h">Transparency and control — you are always kept informed of every stage of the work; we guarantee accountability and openness.</li><li data-block-key="c6tda">Punctuality — we deliver projects exactly on time, without delays or hidden costs.</li></ul>'},
+                    {"type": "rtfbody", "value": '<h3 data-block-key="f2hq3"> Our services:</h3><ul><li data-block-key="dvoh8">Development of design proposals</li><li data-block-key="4hnsj">Design, approval, and project management</li><li data-block-key="dci8b">Full-cycle construction services—from foundation to turnkey completion</li><li data-block-key="5o9h2">MEP systems</li><li data-block-key="ldov">Landscape design</li></ul>'},
+                    {"type": "rtfbody", "value": '<p data-block-key="f2hq3"><b>Creatiff Star</b> — we don’t just build. We create your dream home from the ground up. We don’t just construct buildings—we create comfort and trust.</p><p data-block-key="a170c">We are proud of our team of professionals—they are the foundation of our success and your satisfaction. It is a synergy of experience, knowledge, and a creative approach to every project.</p><p data-block-key="343iq">We don’t just work with residential real estate—we also carry out projects for hotels, restaurants, hostels, and industrial facilities!</p>'},
+                ]
             },
             {
                 'title': 'Painting and manufacture of metal structures',
+                'preview_image': self.get_or_create_seed_image('photo_block_1.png'),
                 'preview_title': 'Painting and manufacture of metal structures',
                 'preview_description': 'We create robust structures using state-of-the-art technology and high-quality materials for your projects.',
-                'stream_data': [{"type": "rtfbody", "value": "<h1>Painting and manufacture of metal structures</h1>"}]
+                'stream_data': [
+                    {"type": "rtfbody", "value": '<h2 data-block-key="y20tp">Painting and fabrication of metal structures</h2><p data-block-key="fa29v">Every detail matters when it comes to creating a unique style for your home. We don’t just offer metal structures—we create works of art that transform spaces. Our products combine quality, style, and individuality. Work with us to create something special for your home, garden, or restaurant. </p>'},
+                    {"type": "rtfbody", "value": '<h3 data-block-key="kmeua">Unique metalwork:</h3><ul><li data-block-key="d9cse">For the home: Elegant railings, fences, and gates—each piece is custom-made to your specifications.</li><li data-block-key="6mg6b">For the garden: Unique benches, arches, and landscape sculptures that seamlessly complement any outdoor space.</li><li data-block-key="c76lp">For your yard: Reliable and aesthetically pleasing fences, pergolas, and decorative elements that will complement and enhance your property.</li><li data-block-key="50p9k">For restaurants: Exquisite metal structures for interiors and exteriors that will highlight the style and prestige of your establishment.</li></ul>'},
+                    # {"type": "images3oversized", "value": {[
+                    #         self.get_or_create_seed_image('content2_img1.png'),
+                    #         self.get_or_create_seed_image('content2_img2.png'),
+                    #         self.get_or_create_seed_image('content2_img3.png'),
+                    #     ]}},
+                    ]
             },
             {
                 'title': 'Modular homes',
+                'preview_image': self.get_or_create_seed_image('photo_block_1.png'),
                 'preview_title': 'Modular homes',
                 'preview_description': 'Our talented specialists transform shipping containers into modern, eco-friendly and functional spaces.',
                 'stream_data': [{"type": "rtfbody", "value": "<h1>Modular homes</h1>"}]
             },
             {
                 'title': 'Windows, doors, blinds and PVC products',
+                'preview_image': self.get_or_create_seed_image('photo_block_1.png'),
                 'preview_title': 'Windows, doors, blinds and PVC products',
                 'preview_description': 'Our range includes a variety of PVC products, as well as a wide selection of blinds to suit your taste.',
                 'stream_data': [{"type": "rtfbody", "value": "<h1>Windows, doors, blinds and PVC products</h1>"}]
             },
             {
                 'title': 'Various household goods',
+                'preview_image': self.get_or_create_seed_image('photo_block_1.png'),
                 'preview_title': 'Various household goods',
                 'preview_description': 'We also specialise in products designed to make your everyday life more comfortable: from water filters to electric blankets.',
                 'stream_data': [{"type": "rtfbody", "value": "<h1>Various household goods</h1>"}]
             },
             {
                 'title': 'A wide range of furniture',
+                'preview_image': self.get_or_create_seed_image('photo_block_1.png'),
                 'preview_title': 'A wide range of furniture',
                 'preview_description': 'We offer modern, stylish furniture for the home, office and commercial spaces. Choose quality and comfort in every element of your interior.',
                 'stream_data': [{"type": "rtfbody", "value": "<h1>A wide range of furniture</h1>"}]

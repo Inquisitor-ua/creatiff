@@ -6,9 +6,8 @@
         <div class="imagetext-column">
             {% for img in value.images %}
                 {% image img fill-600x400 as rendered_image %}
-                <img src="{{ rendered_image.url }}">
+                <img src="{{ rendered_image.url }}" alt="{{ rendered_image.alt }}">
             {% endfor %}
-            <img src="media/images/87628ce2e74007577e320044b562c800.jpg">
         </div>
     
         <div class="imagetext-column">
