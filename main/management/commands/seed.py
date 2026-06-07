@@ -342,25 +342,119 @@ class Command(BaseCommand):
                 ]
             },
             {
+                # Content page 4
                 'title': 'Windows, doors, blinds and PVC products',
                 'preview_image': self.get_or_create_seed_image('photo_block_1.png'),
                 'preview_title': 'Windows, doors, blinds and PVC products',
                 'preview_description': 'Our range includes a variety of PVC products, as well as a wide selection of blinds to suit your taste.',
-                'stream_data': [{"type": "rtfbody", "value": "<h1>Windows, doors, blinds and PVC products</h1>"}]
+                'stream_data': [
+                    {"type": "rtfbody", "value": '<h2 data-block-key="viric">Windows, doors, blinds and PVC products</h2><p data-block-key="4e25s">Welcome to the world of windows and doors from the best manufacturers in Ukraine and Europe! We are an official distributor of automatic windows and doors. Our company has not only 15 years of successful operation in Ukraine, but also five years of experience in the European market. We are proud to continuously expand our capabilities, keep up with global technological trends, and update our equipment to offer our customers the very best.</p><p data-block-key="8kkk0"></p><p data-block-key="70heo">What makes our products special?</p><ol><li data-block-key="47gie">Quality: Our products are manufactured using professional German and Austrian equipment. We use only high-quality materials from renowned European manufacturers, such as Gealan profiles (Germany), Siegenia window hardware (Germany), Guardian glass (Germany), Pilkington (UK), and others.</li><li data-block-key="8r1v1">Certification and Standards: Our production is certified in accordance with the ISO 9001:2009 “Quality Management Systems” standard. In addition, our products are manufactured in accordance with European EN standards. We not only meet these standards but exceed them.</li></ol>'},
+                    {"type": "gallery", "value": {'title': '', 'images': [
+                        self.get_or_create_seed_image('content4_img1'),
+                        self.get_or_create_seed_image('content4_img2'),
+                        self.get_or_create_seed_image('content4_img3'),
+                        self.get_or_create_seed_image('content4_img4'),
+                    ]}},
+                    {"type": "rtfbody", "value": '<p data-block-key="h2ox2">Create a cozy and comfortable atmosphere in your home with our windows and doors! We offer a wide range of products for private homes, cottages, and apartments. Our windows not only keep you warm in the winter and cool in the summer, but also protect your home from outside noise and potential intruders. PVC windows are a practical and durable solution that harmoniously complements your home’s facade. They require no special maintenance and give your home an elegant and modern look. We are ready to meet your highest expectations by bringing light, safety, and comfort into your home. All you have to do is choose.</p>'},
+                    {"type": "imagestext", "value": {
+                        'layout': 'img-left',
+                        'images': [
+                            self.get_or_create_seed_image('content4_img5').id,
+                        ],
+                        'text': '<ul><li data-block-key="h2ox2">Thermal insulation: 1.07 m² °C/W</li><li data-block-key="eqook">Sound insulation: up to 42 dB</li><li data-block-key="1f1gg">Installation depth: 82.5 mm</li><li data-block-key="8or5g">Number of chambers: 6</li><li data-block-key="61ila">Glazing thickness: 32, 44, 48 mm</li><li data-block-key="cuf7c">Seal color: gray</li><li data-block-key="3f6it">Profile manufacturer: Germany</li></ul>'
+                    }},
+                    {"type": "imagestext", "value": {
+                        'layout': 'img-left',
+                        'images': [
+                            self.get_or_create_seed_image('content4_img6').id,
+                        ],
+                        'text': '<ul><li data-block-key="h2ox2">Thermal insulation: 0.91 m² °C/W</li><li data-block-key="5u0r">Sound insulation: up to 38 dB</li><li data-block-key="46l2i">Installation depth: 70 mm</li><li data-block-key="dp0aa">Number of chambers: 6</li><li data-block-key="1n684">Glass panes: 24, 32, 42 mm</li><li data-block-key="e9mqr">Seal color: gray; black for laminated structures</li><li data-block-key="jc76">Profile manufacturer: Ukraine</li></ul>'
+                    }},
+                    {"type": "rtfbody", "value": '<h3 data-block-key="h2ox2">SWS Sliding System</h3><p data-block-key="afgjq">The SWS sliding system is the perfect solution for glazing loggias, balconies, conservatories, and sunrooms. It is also suitable for office partitions, saving space and increasing usable floor area.</p>'},
+                    {"type": "image", "value": self.get_or_create_seed_image('content4_img7.png').id},
+                    {"type": "rtfbody", "value": '<p data-block-key="h2ox2">Key advantages of SWS:</p><ul><li data-block-key="4ic0k">Reliability and durability thanks to a multi-chamber PVC profile and metal reinforcement.</li><li data-block-key="41gg1">Smooth sash operation thanks to aluminum guides and roller carriages.</li><li data-block-key="ajjl">High airtightness and moisture protection thanks to double brush seals.</li><li data-block-key="d2j9d">Energy savings: the plastic profile is 30–40% warmer than aluminum.</li><li data-block-key="2gpgm">Option to install an easily removable mosquito screen.</li></ul>'},
+                    {"type": "image", "value": self.get_or_create_seed_image('content4_img8.png').id},
+                    {"type": "rtfbody", "value": '<p data-block-key="h2ox2">SWS offers a stylish, modern look and excellent value for money. Choose SWS for maximum comfort and efficiency!</p>'},
+                    {"type": "rtfbody", "value": '<h3 data-block-key="h2ox2">Here you can choose windows to suit any style:</h3><p data-block-key="bgqc3">Arched, round, laminated, and transom windows.</p>'},
+                    {"type": "images2p1", "value": {'images': [
+                        self.get_or_create_seed_image('content4_img9.png').id,
+                        self.get_or_create_seed_image('content4_img10.png').id,
+                        self.get_or_create_seed_image('content4_img11.png').id,
+                    ]}},
+                    {"type": "rtfbody", "value": '<p data-block-key="h2ox2">It’s not just classic white—Viknar\'off manufactures windows in a wide range of colors—from classic browns to vibrant shades—using high-quality PVC film. This allows you to choose the best options for every facade. Laminated films do not fade or crack in the sun or cold, and the windows retain their attractive appearance for longer. These windows require no special maintenance other than periodic cleaning to remove dirt and dust.</p>'},
+                    {"type": "gallery", "value": {'title': 'Colors:', 'images': [
+                        self.get_or_create_seed_image('content4_img12'),
+                        self.get_or_create_seed_image('content4_img13'),
+                        self.get_or_create_seed_image('content4_img14'),
+                        self.get_or_create_seed_image('content4_img15'),
+                        self.get_or_create_seed_image('content4_img12'),
+                    ]}},
+                    {"type": "image", "value": self.get_or_create_seed_image('content4_img16.png').id},
+                    {"type": "rtfbody", "value": '<p data-block-key="h2ox2">Doors are not just a form of protection; they are also the calling card of your home. That is why they must be not only reliable, but also elegant and unique. This is exactly what we offer our customers. You can order standard doors as well as arched doors, sliding doors, and folding (accordion-style) doors.</p>'},
+                    {"type": "rtfbody", "value": '<h3 data-block-key="h2ox2">What can you find here?</h3><h4 data-block-key="81fhd">Standard doors</h4><p data-block-key="e5vs">Simplicity and reliability—the perfect solution for those who appreciate classic elegance.</p>'},
+                    {"type": "images2", "value": {'images': [
+                        self.get_or_create_seed_image('content4_img17.png').id,
+                        self.get_or_create_seed_image('content4_img18.png').id,
+                    ]}},
+                    {"type": "gallery", "value": {'title': 'Standard Door Gallery', 'images': [
+                        self.get_or_create_seed_image('content4_img19'),
+                        self.get_or_create_seed_image('content4_img20'),
+                        self.get_or_create_seed_image('content4_img21'),
+                        self.get_or_create_seed_image('content4_img22'),
+                    ]}},
+                    {"type": "gallery", "value": {'title': 'Gallery of Double Doors', 'images': [
+                        self.get_or_create_seed_image('content4_img23'),
+                        self.get_or_create_seed_image('content4_img24'),
+                        self.get_or_create_seed_image('content4_img25'),
+                        self.get_or_create_seed_image('content4_img23'),
+                    ]}},
+                    {"type": "rtfbody", "value": '<h3 data-block-key="h2ox2">Arched doors:</h3><p data-block-key="8pieq">Elegant and sophisticated, they will add a special touch to your interior.</p>'},
+                    {"type": "image", "value": self.get_or_create_seed_image('content4_img26.png').id},
+                    {"type": "rtfbody", "value": '<h3 data-block-key="h2ox2">Parallel sliding doors:</h3><p data-block-key="3mgic">Space is a valuable resource. Our doors will help you make the most of it.</p>'},
+                    {"type": "image", "value": self.get_or_create_seed_image('content4_img27.png').id},
+                    {"type": "rtfbody", "value": '<h2 data-block-key="h2ox2">Choose a door that reflects your style and creates a unique atmosphere in your home.</h2><p data-block-key="d81on">Entrust your doors to us, and they will not only protect you but also serve as a calling card for your cozy home.</p><p data-block-key="44oku"></p><p data-block-key="705tt">By choosing our company, you’re guaranteed not only the highest product quality but also fast delivery. We value your time and ensure fast and secure delivery. We also handle the entire installation process, offering you a hassle-free experience from start to finish. And, of course, our ten-year product warranty confirms our commitment to long-term quality and your trust. Choose our company and let quality become a part of your life.</p>'},
+                ]
             },
             {
+                # Content page 5
                 'title': 'Various household goods',
                 'preview_image': self.get_or_create_seed_image('photo_block_1.png'),
                 'preview_title': 'Various household goods',
                 'preview_description': 'We also specialise in products designed to make your everyday life more comfortable: from water filters to electric blankets.',
-                'stream_data': [{"type": "rtfbody", "value": "<h1>Various household goods</h1>"}]
+                'stream_data': [
+                    {"type": "rtfbody", "value": "<h1>Various household goods</h1>"},
+                ]
             },
             {
+                # Content page 6
                 'title': 'A wide range of furniture',
                 'preview_image': self.get_or_create_seed_image('photo_block_1.png'),
                 'preview_title': 'A wide range of furniture',
                 'preview_description': 'We offer modern, stylish furniture for the home, office and commercial spaces. Choose quality and comfort in every element of your interior.',
-                'stream_data': [{"type": "rtfbody", "value": "<h1>A wide range of furniture</h1>"}]
+                'stream_data': [
+                    {"type": "images3oversized", "value": {'images': [
+                        self.get_or_create_seed_image('content6_img1.png').id,
+                        self.get_or_create_seed_image('content6_img2.png').id,
+                        self.get_or_create_seed_image('content6_img3.png').id,
+                    ]}},
+                    {"type": "rtfbody", "value": '<h2 data-block-key="g7ctb"> A wide selection of furniture</h2>'},
+                    {"type": "imagestext", "value": {
+                        'layout': 'img-left',
+                        'images': [
+                            self.get_or_create_seed_image('content6_img4.png').id,
+                        ],
+                        'text': '<p data-block-key="pubya"><b>Your home is your castle. With Black Red White furniture, it will become even cozier and more elegant.</b></p><p data-block-key="8fi8">We are proud to be the official distributor of Black Red White furniture—a brand synonymous with quality, modern design, and affordability.</p><p data-block-key="dq859">Your home is not just a place where you spend your time. It is your personal universe, a reflection of your style, personality, and taste.</p><p data-block-key="f0k0d">That is why we offer exclusive Black Red White furniture that will transform your space into a cozy haven.</p>'
+                    }},
+                    {"type": "rtfbody", "value": '<h3 data-block-key="pubya">A selection that will make your heart race:</h3><ul><li data-block-key="5698c"><b>Elegance and functionality:</b> our wardrobes and dressers combine classic beauty with modern technology.</li><li data-block-key="vbrp"><b>Comfort you can feel from the very first touch:</b> plush sofas and armchairs are designed for complete relaxation.</li><li data-block-key="g1vf"><b>Sweet dreams come true:</b> our beds and mattresses offer deep, restful sleep, as if you were floating on a cloud.</li><li data-block-key="e81ka"><b>Culinary masterpieces begin here:</b> our kitchen sets are designed to inspire you to create culinary masterpieces.</li></ul>'},
+                    {"type": "images3p2", "value": {'images': [
+                        self.get_or_create_seed_image('content6_img5.png').id,
+                        self.get_or_create_seed_image('content6_img6.png').id,
+                        self.get_or_create_seed_image('content6_img7.png').id,
+                        self.get_or_create_seed_image('content6_img8.png').id,
+                        self.get_or_create_seed_image('content6_img9.png').id,
+                    ]}},
+                    {"type": "rtfbody", "value": '<h3 data-block-key="pubya">The advantages of our furniture:</h3><p data-block-key="658g7"></p><ul><li data-block-key="4gum3"><b>Unmatched quality:</b> only proven materials and cutting-edge technology.</li><li data-block-key="9pscd"><b>Glamorous design:</b> our furniture brings global trends right into your home.</li><li data-block-key="38ar0"><b>Prices that delight: </b>we make style affordable without compromising on quality.</li><li data-block-key="bupp7"><b>Furniture with character:</b> every piece reflects your personality and the stories that unfold every day.</li><li data-block-key="3f9q5"><b>A warranty you can trust:</b> we care about you and your comfort, which is why we guarantee the quality of every product.</li></ul><p data-block-key="32o3t">Don’t miss your chance to transform your home with Black Red White furniture!</p><p data-block-key="np5j"></p><p data-block-key="bodl7"> </p><p data-block-key="38u9q">We look forward to seeing you in Alicante, at Plaza Galicia, 1.</p>'},
+                ]
             },
         ]
 

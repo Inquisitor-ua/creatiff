@@ -136,6 +136,8 @@ class Images2Block(StructBlock):
 
 
 class GalleryBlock(StructBlock):
+    title = CharBlock(max_length=250, label=_("Heading of a gallery"), blank=True, null=True)
+
     images = ListBlock(
         ImageChooserBlock(required = True),
         label = _("Add images"),
