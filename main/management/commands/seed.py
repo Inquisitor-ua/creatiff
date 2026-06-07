@@ -272,6 +272,7 @@ class Command(BaseCommand):
 
         pages_data = [
             {
+                # Content page 1
                 'title': 'Construction, building and major refurbishments',
                 'preview_image': self.get_or_create_seed_image('photo_block_1.png'),
                 'preview_title': 'Construction, building and major refurbishments',
@@ -284,6 +285,7 @@ class Command(BaseCommand):
                 ]
             },
             {
+                # Content page 2
                 'title': 'Painting and manufacture of metal structures',
                 'preview_image': self.get_or_create_seed_image('photo_block_1.png'),
                 'preview_title': 'Painting and manufacture of metal structures',
@@ -291,19 +293,53 @@ class Command(BaseCommand):
                 'stream_data': [
                     {"type": "rtfbody", "value": '<h2 data-block-key="y20tp">Painting and fabrication of metal structures</h2><p data-block-key="fa29v">Every detail matters when it comes to creating a unique style for your home. We don’t just offer metal structures—we create works of art that transform spaces. Our products combine quality, style, and individuality. Work with us to create something special for your home, garden, or restaurant. </p>'},
                     {"type": "rtfbody", "value": '<h3 data-block-key="kmeua">Unique metalwork:</h3><ul><li data-block-key="d9cse">For the home: Elegant railings, fences, and gates—each piece is custom-made to your specifications.</li><li data-block-key="6mg6b">For the garden: Unique benches, arches, and landscape sculptures that seamlessly complement any outdoor space.</li><li data-block-key="c76lp">For your yard: Reliable and aesthetically pleasing fences, pergolas, and decorative elements that will complement and enhance your property.</li><li data-block-key="50p9k">For restaurants: Exquisite metal structures for interiors and exteriors that will highlight the style and prestige of your establishment.</li></ul>'},
-                    # {"type": "images3oversized", "value": {[
-                    #         self.get_or_create_seed_image('content2_img1.png'),
-                    #         self.get_or_create_seed_image('content2_img2.png'),
-                    #         self.get_or_create_seed_image('content2_img3.png'),
-                    #     ]}},
-                    ]
+                    {"type": "images3oversized", "value": {'images': [
+                        self.get_or_create_seed_image('content2_img1.png').id,
+                        self.get_or_create_seed_image('content2_img2.png').id,
+                        self.get_or_create_seed_image('content2_img3.png').id,
+                    ]}},
+                    {"type": "images3oversized", "value": {'images': [
+                        self.get_or_create_seed_image('content2_img4.png').id,
+                        self.get_or_create_seed_image('content2_img5.png').id,
+                        self.get_or_create_seed_image('content2_img6.png').id,
+                    ]}},
+                    {"type": "rtfbody", "value": '<p data-block-key="tykyz">Working with us ensures that every detail will be executed to the highest standards of quality and design. We are dedicated to bringing your boldest ideas to life.</p><p data-block-key="5cn2c">Choose uniqueness—choose us!</p>'},
+                    {"type": "images2p1", "value": {'images': [
+                        self.get_or_create_seed_image('content2_img7.png').id,
+                        self.get_or_create_seed_image('content2_img8.png').id,
+                        self.get_or_create_seed_image('content2_img9.png').id,
+                    ]}},
+                ]
             },
             {
+                # Content page 3
                 'title': 'Modular homes',
                 'preview_image': self.get_or_create_seed_image('photo_block_1.png'),
                 'preview_title': 'Modular homes',
                 'preview_description': 'Our talented specialists transform shipping containers into modern, eco-friendly and functional spaces.',
-                'stream_data': [{"type": "rtfbody", "value": "<h1>Modular homes</h1>"}]
+                'stream_data': [
+                    {"type": "rtfbody", "value": '<h2 data-block-key="6szf1">Modular homes</h2><p data-block-key="780gq"><b>Your dream home—anywhere in the world</b></p><p data-block-key="178ko">Do you want to live away from the hustle and bustle of the city, closer to nature and in the fresh air?Do you want to own a home that can be easily moved to another location if needed?Do you want to save on utility bills and live off the grid?</p><p data-block-key="7d693">If you answered “yes”—check out the idea of a self-sufficient modular home made from shipping containers!</p>'},
+                    {"type": "rtfbody", "value": '<h3 data-block-key="fqkn8">The Problem and the Solution</h3><p data-block-key="b5bhp">In the wake of the COVID-19 pandemic, many people are looking to live or vacation outside the city—away from the hustle and bustle. We offer homes built from shipping containers—durable, proven, modular, mobile, and self-sufficient.</p>'},
+                    {"type": "image", "value": self.get_or_create_seed_image('content3_img1.png').id},
+                    {"type": "rtfbody", "value": '<h3 data-block-key="fqkn8">Why do people choose us?</h3><ul><li data-block-key="8rrtu">We build homes from shipping containers—reliable and proven structures.</li><li data-block-key="91uoq">We use a modular assembly method that allows us to create floor plans of any complexity.</li><li data-block-key="4uu9f">We ensure efficient transportation and installation anywhere.</li><li data-block-key="9pngq">We guarantee high-quality materials, insulation, and ventilation.</li><li data-block-key="58mu6">We equip the homes with life support systems for complete self-sufficiency—no need to connect to utility networks.</li></ul>'},
+                    {"type": "image", "value": self.get_or_create_seed_image('content3_img2.png').id},
+                    {"type": "rtfbody", "value": '<h3 data-block-key="fqkn8">The advantages of our homes</h3><ul><li data-block-key="19s41">Excellent insulation, ensuring comfort in both winter and summer.</li><li data-block-key="2hlve">A modern ventilated facade system and high-quality windows—for a unique look.</li><li data-block-key="6p71f">Can be installed on both urban and rural plots—with lower costs and less red tape than conventional construction.</li><li data-block-key="293c9">If necessary, the house can be quickly moved to a new location.</li></ul>'},
+                    {"type": "image", "value": self.get_or_create_seed_image('content3_img3.png').id},
+                    {"type": "rtfbody", "value": '<h3 data-block-key="fqkn8">Why are container homes cheaper than traditional construction?</h3><ul><li data-block-key="22uua">Speed of construction. Traditional construction takes much longer, which is why prefabricated homes are significantly cheaper.</li><li data-block-key="7k0ph">Less maintenance. All modules undergo factory testing, so you avoid unexpected costs after installation.</li><li data-block-key="alf0a">Quick return on investment. Fast construction = faster occupancy.</li><li data-block-key="fqqll">Savings on utility bills. Thanks to self-sufficiency and energy efficiency, you reduce your monthly expenses.</li></ul>'},
+                    {"type": "rtfbody", "value": '<h3 data-block-key="fqkn8">How do we work?</h3><ul><li data-block-key="eesbf">You choose a plot of land, or we can help you find one.</li><li data-block-key="1id06">You choose a standard design or request a custom design and layout.</li><li data-block-key="10mqe">We manufacture, transport, and install your home.</li><li data-block-key="99m6s">You enjoy your finished, fully furnished home.</li></ul>'},
+                    {"type": "image", "value": self.get_or_create_seed_image('content3_img4.png').id},
+                    {"type": "rtfbody", "value": '<h3 data-block-key="fqkn8">What will you get?</h3><ul><li data-block-key="15i98">A dream home that can be set up anywhere and moved if necessary.</li><li data-block-key="7useh">A self-contained home that doesn’t rely on utility networks.</li><li data-block-key="2020d">Comfort and safety all year round.</li><li data-block-key="2neja">A space that reflects your personality and style.</li></ul>'},
+                    {"type": "images2", "value": {'images': [
+                        self.get_or_create_seed_image('content3_img5.png').id,
+                        self.get_or_create_seed_image('content3_img6.png').id,
+                    ]}},
+                    {"type": "rtfbody", "value": '<p data-block-key="fqkn8">We offer more than just a place to live—we give you free time. Time you can spend socializing, traveling, and loving—and we’ll take care of the house.</p>'},
+                    {"type": "images2p1", "value": {'images': [
+                        self.get_or_create_seed_image('content3_img7.png').id,
+                        self.get_or_create_seed_image('content3_img8.png').id,
+                        self.get_or_create_seed_image('content3_img9.png').id,
+                    ]}},
+                ]
             },
             {
                 'title': 'Windows, doors, blinds and PVC products',
