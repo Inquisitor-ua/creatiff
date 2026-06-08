@@ -36,7 +36,6 @@ class FooterSettings(models.Model):
 @register_snippet
 class ContactFormSettings(TranslatableMixin, models.Model):
     title = models.CharField(max_length=128, verbose_name=_("Form title"), blank=True)
-    recipient_email = models.EmailField(blank=True, verbose_name=_("Email for receiving forms"))
 
     phone_required = models.BooleanField(default=False, verbose_name=_("Is phone required"))
 
@@ -50,10 +49,10 @@ class ContactFormSettings(TranslatableMixin, models.Model):
     message_placeholder = models.CharField(max_length=256, verbose_name=_("Placeholder for field 'Message'"), blank=True)
     submit_button_text = models.CharField(max_length=64, verbose_name=_("Confirmation button text"), blank=True)
     success_message = models.CharField(max_length=256, verbose_name=_("Message for сonfirmation that the form was successfully submitted"), blank=True)
+    error_message = models.CharField(max_length=256, verbose_name=_("Message for notification that some error has been occured"), blank=True)
 
     panels = [
         FieldPanel('title'),
-        FieldPanel('recipient_email'),
         FieldPanel('phone_required'),
         FieldPanel('name_label'),
         FieldPanel('name_placeholder'),
@@ -65,6 +64,7 @@ class ContactFormSettings(TranslatableMixin, models.Model):
         FieldPanel('message_placeholder'),
         FieldPanel('submit_button_text'),
         FieldPanel('success_message'),
+        FieldPanel('error_message'),
     ]
 
     def __str__(self):

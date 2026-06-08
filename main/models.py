@@ -128,6 +128,7 @@ class CompanySettings(BaseSiteSetting):
     # Contacts
     phone = models.CharField(max_length=50, blank=True, verbose_name=_("Phone"))
     email = models.EmailField(blank=True, verbose_name=_("Email"))
+    recipient_email = models.EmailField(blank=True, verbose_name=_("Email for receiving forms"))
 
     # Social media
     facebook = models.URLField(blank=True, verbose_name=_("Facebook URL"))
@@ -148,6 +149,7 @@ class CompanySettings(BaseSiteSetting):
         MultiFieldPanel([
             FieldPanel('phone'),
             FieldPanel('email'),
+            FieldPanel('recipient_email'),
         ], heading="Contact information")
     ]
 

@@ -1,0 +1,12 @@
+{% if messages %}
+    <div id="toast-container" class="toast-container">
+        {% for message in messages %}
+            {# Переводим тег 'error' в 'danger' для стилей, если не настраивал MESSAGE_TAGS #}
+            <div class="toast-notification {% if message.tags == 'error' %}danger{% else %}{{ message.tags }}{% endif %}">
+                <span class="toast-message">{{ message }}</span>
+                <button class="toast-close-btn">&times;</button>
+                <div class="toast-progress"></div>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}

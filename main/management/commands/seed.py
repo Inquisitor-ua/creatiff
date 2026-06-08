@@ -157,7 +157,6 @@ class Command(BaseCommand):
 
         defaults = {
             "title": "HAVE ANY QUESTIONS? CONTACT US",
-            "recipient_email": "star.creatiff@gmail.com",
             "phone_required": False,
 
             "name_label": "Your name",
@@ -174,6 +173,7 @@ class Command(BaseCommand):
             
             "submit_button_text": "Send a Letter",
             "success_message": "Your message has been sent successfully!",
+            "error_message": "Some error has been occured, please try later",
         }
 
         obj, created = ContactFormSettings.objects.update_or_create(
