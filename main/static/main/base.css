@@ -25,7 +25,8 @@ body {
     padding-left: 16px;
     padding-right: 16px;
 }
-.article-container {
+.article-container,
+.block-rtfbody {
     margin-left: auto;
     margin-right: auto;
     padding-left: 16px;
@@ -68,7 +69,8 @@ button:hover{
         padding-right: 104px;
         width: 1440px;
     }
-    .article-container {
+    .article-container,
+    .block-rtfbody {
         padding-left: 312px;
         padding-right: 312px;
         margin-top: 72px;

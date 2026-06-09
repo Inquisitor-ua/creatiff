@@ -1,5 +1,5 @@
 <!-- Gallery of images  -->
-
+{% load static wagtailcore_tags wagtailimages_tags my_components i18n %}
 
 <!-- example modal -->
 <!-- <div class="article-container">
@@ -86,9 +86,9 @@
     <div class="swiper-wrapper">
         {% for img in value.images %}
         <div class="swiper-slide">
-            {% image img width-165 as rendered-image %}
-            <img src="{{ rendered-image.url }}" 
-                alt="{{ rendered-image.alt }}"/>
+            {% image img width-165 as rendered_image %}
+            <img src="{{ rendered_image.url }}" 
+                alt="{{ rendered_image.alt }}"/>
         </div>
         {% endfor %}
     </div>
