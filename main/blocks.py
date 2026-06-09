@@ -121,6 +121,20 @@ class Images3oversizedBlock(StructBlock):
         label = _("Row with 3 images")
 
 
+class Images3p3Block(StructBlock):
+    images = ListBlock(
+        ImageChooserBlock(required = True),
+        label = _("Add images"),
+        min_num = 6,
+        max_num = 6,
+    )
+
+    class Meta:
+        icon = 'image'
+        template = 'main/blocks/images3p3_block.html'
+        label = _("2 rows with 3 images each")
+
+
 class Images2Block(StructBlock):
     images = ListBlock(
         ImageChooserBlock(required = True),
