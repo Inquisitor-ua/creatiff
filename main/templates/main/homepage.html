@@ -15,12 +15,14 @@
 <link rel="stylesheet" href="{% static 'main/components/promo_section.css' %}">
 <link rel="stylesheet" href="{% static 'main/components/partners.css' %}">
 <link rel="stylesheet" href="{% static 'main/components/messages.css' %}">
+<link rel="stylesheet" href="{% static 'main/components/breadcrumbs.css' %}">
 
 <link rel="stylesheet" href="{% static 'main/blocks/images2_block.css' %}">
 <link rel="stylesheet" href="{% static 'main/blocks/images2p1_block.css' %}">
 <link rel="stylesheet" href="{% static 'main/blocks/images3p2_block.css' %}">
 <link rel="stylesheet" href="{% static 'main/blocks/imagetext_block.css' %}">
 <link rel="stylesheet" href="{% static 'main/blocks/images3oversized_block.css' %}">
+<link rel="stylesheet" href="{% static 'main/blocks/images3p3_block.css' %}">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <link rel="stylesheet" href="{% static 'main/blocks/gallery_block.css' %}">
@@ -57,6 +59,8 @@
             <button type="button">{{ page.load_more_button }}</button>
         </div>
     </section>
+
+    {% include "main/blocks/gallery_block.html" %}
 
     {{ page.partners }}
 

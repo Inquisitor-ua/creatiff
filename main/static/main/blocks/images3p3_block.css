@@ -1,0 +1,19 @@
+.images3p3 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.images3p3>.row {
+    display: flex;
+    gap: 16px;
+}
+
+.images3p3>.row img {
+    width: 192px;
+    height: 235px;
+}
+.images3p3>.row img:first-of-type,
+.images3p3>.row img:last-of-type {
+    width: 296px;
+    height: 235px;
+}
