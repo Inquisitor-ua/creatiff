@@ -13,7 +13,7 @@ class Command(BaseCommand):
     help = "Automatically creates a homepage, default site setup, and populates content pages."
 
     def get_or_create_seed_image(self, filename):
-        file_path = os.path.join("media", "original_images", filename)
+        file_path = os.path.join("media", "seed_images", filename)
         self.stdout.write(file_path)
         
         if not os.path.exists(file_path):

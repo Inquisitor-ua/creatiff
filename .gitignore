@@ -4,3 +4,5 @@
 *.py[cod]
 
 .idea
+/media/images
+/media/original_images
