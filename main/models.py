@@ -100,6 +100,7 @@ class ContentPage(Page):
         ('images2p1', blocks.Images2p1Block()),
         ('images3p2', blocks.Images3p2Block()),
         ('images3oversized', blocks.Images3oversizedBlock()),
+        ('images3p3', blocks.Images3p3Block()),
         ('images2', blocks.Images2Block()),
         ('gallery', blocks.GalleryBlock()),
         ('imagestext', blocks.ImagetextBlock()),

@@ -293,12 +293,10 @@ class Command(BaseCommand):
                 'stream_data': [
                     {"type": "rtfbody", "value": '<h2 data-block-key="y20tp">Painting and fabrication of metal structures</h2><p data-block-key="fa29v">Every detail matters when it comes to creating a unique style for your home. We don’t just offer metal structures—we create works of art that transform spaces. Our products combine quality, style, and individuality. Work with us to create something special for your home, garden, or restaurant. </p>'},
                     {"type": "rtfbody", "value": '<h3 data-block-key="kmeua">Unique metalwork:</h3><ul><li data-block-key="d9cse">For the home: Elegant railings, fences, and gates—each piece is custom-made to your specifications.</li><li data-block-key="6mg6b">For the garden: Unique benches, arches, and landscape sculptures that seamlessly complement any outdoor space.</li><li data-block-key="c76lp">For your yard: Reliable and aesthetically pleasing fences, pergolas, and decorative elements that will complement and enhance your property.</li><li data-block-key="50p9k">For restaurants: Exquisite metal structures for interiors and exteriors that will highlight the style and prestige of your establishment.</li></ul>'},
-                    {"type": "images3oversized", "value": {'images': [
+                    {"type": "images3p3", "value": {'images': [
                         self.get_or_create_seed_image('content2_img1.png').id,
                         self.get_or_create_seed_image('content2_img2.png').id,
                         self.get_or_create_seed_image('content2_img3.png').id,
-                    ]}},
-                    {"type": "images3oversized", "value": {'images': [
                         self.get_or_create_seed_image('content2_img4.png').id,
                         self.get_or_create_seed_image('content2_img5.png').id,
                         self.get_or_create_seed_image('content2_img6.png').id,
