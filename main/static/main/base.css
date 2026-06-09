@@ -30,6 +30,8 @@ body {
     margin-right: auto;
     padding-left: 16px;
     padding-right: 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
     max-width: 360px;
 }
 
@@ -69,6 +71,8 @@ button:hover{
     .article-container {
         padding-left: 312px;
         padding-right: 312px;
+        margin-top: 72px;
+        margin-bottom: 72px;        
         max-width: none;
         width: 1440px;
     }

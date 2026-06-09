@@ -1,0 +1,11 @@
+.breadcrumbs {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: rgba(21, 19, 42, 0.5);
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+    color: rgba(21, 19, 42, 0.5);
+}

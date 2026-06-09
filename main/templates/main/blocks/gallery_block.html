@@ -84,7 +84,12 @@
     <div class="swiper-divider"></div>
 
     <div class="swiper-wrapper">
+        {% for img in value.images %}
         <div class="swiper-slide">
+            {% image img width-165 as rendered-image %}
+            <img src="{{ rendered-image.url }}" 
+                alt="{{ rendered-image.alt }}"/>
         </div>
+        {% endfor %}
     </div>
 </div>
