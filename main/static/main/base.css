@@ -26,20 +26,29 @@ body {
     padding-right: 16px;
 }
 .article-container,
-.block-rtfbody {
+.block-rtfbody,
+.block-images3p3,
+.block-images2,
+.block-images3p2,
+.block-images2p1,
+.block-images3p3,
+.block-image,
+.block-gallery,
+.block-imagestext {
     margin-left: auto;
     margin-right: auto;
     padding-left: 16px;
     padding-right: 16px;
-    margin-top: 24px;
     margin-bottom: 24px;
     max-width: 360px;
 }
 
-button {
+button,
+.anchor-button {
     transition: all 0.3s ease;
 }
-button:hover{
+button:hover,
+.anchor-button:hover {
     cursor: pointer;
     background-color: #bd6e00;
 }
@@ -70,11 +79,18 @@ button:hover{
         width: 1440px;
     }
     .article-container,
-    .block-rtfbody {
+    .block-rtfbody,
+    .block-images3p3,
+    .block-images2,
+    .block-images3p2,
+    .block-images2p1,
+    .block-images3p3,
+    .block-image,
+    .block-gallery,
+    .block-imagestext {
         padding-left: 312px;
         padding-right: 312px;
-        margin-top: 72px;
-        margin-bottom: 72px;        
+        margin-bottom: 32px;        
         max-width: none;
         width: 1440px;
     }
