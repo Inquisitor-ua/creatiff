@@ -29,8 +29,8 @@
             </ul>
         </div>
         <div class="img-container">
-            <div class="img-placeholder">
-            </div>
+            {% image value.image original as img %}
+            <img src="{{ img.url }}" class="img-placeholder">
         </div>
     </div>
 </section>
