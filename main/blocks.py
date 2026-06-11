@@ -149,6 +149,20 @@ class Images2Block(StructBlock):
         label = _("Row with 2 images")
 
 
+class Images4Block(StructBlock):
+    images = ListBlock(
+        ImageChooserBlock(required = True),
+        label = _("Add images"),
+        min_num = 4,
+        max_num = 4,
+    )
+
+    class Meta:
+        icon = 'image'
+        template = 'main/blocks/images4_block.html'
+        label = _("Row with 4 images")
+
+
 class GalleryBlock(StructBlock):
     title = CharBlock(max_length=250, label=_("Heading of a gallery"), blank=True, null=True)
 
