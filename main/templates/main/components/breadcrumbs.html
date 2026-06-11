@@ -2,8 +2,10 @@
 
 <!-- Example  -->
 <div class="breadcrumbs">
-    {% for ancestor in ancestors %}
-        <a href="{% pageurl ancestor %}">{{ ancestor.title }}</a> <span> > </span>
-    {% endfor %}
-    <span>{{ current_page.title }}</span>
+    <div class="container">
+        {% for ancestor in ancestors %}
+            <a href="{% pageurl ancestor %}">{{ ancestor.title }}</a> <span> > </span>
+        {% endfor %}
+        <span>{{ current_page.title }}</span>
+    </div>
 </div>

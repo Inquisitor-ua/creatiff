@@ -1,19 +1,17 @@
 
 {% load wagtailimages_tags %}
 
-<div class="article-container">
-    <div class="imagetext {{ value.layout }}">
-        <div class="imagetext-column">
-            {% for img in value.images %}
-                {% image img fill-600x400 as rendered_image %}
-                <img src="{{ rendered_image.url }}" alt="{{ rendered_image.alt }}">
-            {% endfor %}
-        </div>
-    
-        <div class="imagetext-column">
-            <div class="imagetext-text">
-                {{ value.text }}
-            </div>
+<div class="imagetext {{ value.layout }}">
+    <div class="imagetext-column">
+        {% for img in value.images %}
+            {% image img fill-600x400 as rendered_image %}
+            <img src="{{ rendered_image.url }}" alt="{{ rendered_image.alt }}">
+        {% endfor %}
+    </div>
+
+    <div class="imagetext-column">
+        <div class="imagetext-text">
+            {{ value.text }}
         </div>
     </div>
 </div>
