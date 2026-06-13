@@ -4,8 +4,8 @@
 <div class="imagetext {{ value.layout }}">
     <div class="imagetext-column">
         {% for img in value.images %}
-            {% image img fill-600x400 as rendered_image %}
-            <img src="{{ rendered_image.url }}" alt="{{ rendered_image.alt }}">
+            {% image img fill-600x400 format-webp as rendered_image %}
+            <img src="{{ rendered_image.url }}" alt="{{ rendered_image.alt }}" loading="lazy">
         {% endfor %}
     </div>
 

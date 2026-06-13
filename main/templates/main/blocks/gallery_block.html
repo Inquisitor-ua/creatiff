@@ -86,9 +86,10 @@
     <div class="swiper-wrapper">
         {% for img in value.images %}
         <div class="swiper-slide">
-            {% image img width-165 as rendered_image %}
+            {% image img width-165 format-webp as rendered_image %}
             <img src="{{ rendered_image.url }}" 
-                alt="{{ rendered_image.alt }}"/>
+                alt="{{ rendered_image.alt }}"
+                loading="lazy"/>
         </div>
         {% endfor %}
     </div>

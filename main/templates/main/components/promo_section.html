@@ -3,7 +3,7 @@
 <section class="promo">
     <div class="container">
         {% image value.image width-400 as img %}
-        <img src="{{ img.url }}" alt="{{ img.alt }}">
+        <img src="{{ img.url }}" alt="{{ img.alt }}" loading="lazy">
         <div class="promo-text-wrapper">
             <h2>{{ value.title }}</h2>
             <div class="promo-text-main">

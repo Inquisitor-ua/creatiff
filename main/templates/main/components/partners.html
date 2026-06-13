@@ -5,8 +5,8 @@
         <p>{{ value.title }}</p>
         <div class="partners-wrapper">
             {% for partner in value.partners %}
-                {% image partner.partner_logo original as logo %}
-                <img src = "{{ logo.url }}" alt="{{ logo.alt }}">
+                {% image partner.partner_logo original format-webp as logo %}
+                <img src = "{{ logo.url }}" alt="{{ logo.alt }}" loading="lazy">
             {% endfor %}
         </div>
     </div>

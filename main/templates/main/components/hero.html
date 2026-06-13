@@ -30,7 +30,7 @@
         </div>
         <div class="img-container">
             {% image value.image original as img %}
-            <img src="{{ img.url }}" class="img-placeholder">
+            <img src="{{ img.url }}" class="img-placeholder" loading="lazy">
         </div>
     </div>
 </section>
