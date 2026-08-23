@@ -29,16 +29,18 @@
     line-height: 150%;
     color: rgba(255, 255, 255, 0.75);
 }
-.hero-text-wrapper>button {
+.hero-text-wrapper>a {
     color: #fff;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 125%;
     text-transform: uppercase;
+    text-decoration: none;
+    display: block;
 
     background: #ff9300;
-    width: 100%;
-    padding: 18px 0;
+    width: fit-content;
+    padding: 18px 32px;
     border-radius: 64px;
     border: none;
     margin-bottom: 16px;
@@ -68,6 +70,11 @@ span.highlight {
     margin-right: auto;
     width: 321px;
     height: 332px;
+}
+
+.img-container>img {
+    position: absolute;
+    z-index: 999;
 }
 
 .img-placeholder {

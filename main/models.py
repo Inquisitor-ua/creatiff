@@ -102,6 +102,7 @@ class ContentPage(Page):
         ('images3oversized', blocks.Images3oversizedBlock()),
         ('images3p3', blocks.Images3p3Block()),
         ('images2', blocks.Images2Block()),
+        ('images4', blocks.Images4Block()),
         ('gallery', blocks.GalleryBlock()),
         ('imagestext', blocks.ImagetextBlock()),
     ], use_json_field=True, blank=True)

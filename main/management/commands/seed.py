@@ -14,7 +14,6 @@ class Command(BaseCommand):
 
     def get_or_create_seed_image(self, filename):
         file_path = os.path.join("media", "seed_images", filename)
-        self.stdout.write(file_path)
         
         if not os.path.exists(file_path):
             return None
@@ -347,7 +346,7 @@ class Command(BaseCommand):
                 'preview_description': 'Our range includes a variety of PVC products, as well as a wide selection of blinds to suit your taste.',
                 'stream_data': [
                     {"type": "rtfbody", "value": '<h2 data-block-key="viric">Windows, doors, blinds and PVC products</h2><p data-block-key="4e25s">Welcome to the world of windows and doors from the best manufacturers in Ukraine and Europe! We are an official distributor of automatic windows and doors. Our company has not only 15 years of successful operation in Ukraine, but also five years of experience in the European market. We are proud to continuously expand our capabilities, keep up with global technological trends, and update our equipment to offer our customers the very best.</p><p data-block-key="8kkk0"></p><p data-block-key="70heo">What makes our products special?</p><ol><li data-block-key="47gie">Quality: Our products are manufactured using professional German and Austrian equipment. We use only high-quality materials from renowned European manufacturers, such as Gealan profiles (Germany), Siegenia window hardware (Germany), Guardian glass (Germany), Pilkington (UK), and others.</li><li data-block-key="8r1v1">Certification and Standards: Our production is certified in accordance with the ISO 9001:2009 “Quality Management Systems” standard. In addition, our products are manufactured in accordance with European EN standards. We not only meet these standards but exceed them.</li></ol>'},
-                    {"type": "gallery", "value": {'title': '', 'images': [
+                    {"type": "images4", "value": {'images': [
                         self.get_or_create_seed_image('content4_img1.png').id,
                         self.get_or_create_seed_image('content4_img2.png').id,
                         self.get_or_create_seed_image('content4_img3.png').id,

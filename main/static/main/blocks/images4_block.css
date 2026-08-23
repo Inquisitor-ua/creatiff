@@ -1,0 +1,8 @@
+.images4 {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+.images4>img {
+    width: 193px;
+}
